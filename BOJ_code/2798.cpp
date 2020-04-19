@@ -1,6 +1,5 @@
 #include<iostream>
 #include<cstdio>
-#include<vector>
 using namespace std;
 int n, m; 
 int arr[100];
@@ -11,9 +10,9 @@ int main()
 	for(int i = 0; i < n; ++i)
 	{
 		scanf("%d", &arr[i]);
-    }
+	}
     
-    int sum = 0;
+	int sum = 0;
 	for(int i = 0; i <n;++i)
 		for(int j = i+1; j <n; ++j)
 			for(int k = j+1; k<n; ++k)
@@ -28,7 +27,9 @@ int main()
 /*
 이 문제는 모든 경우의 수를 정직하게 따져보는 것이 의도인 문제입니다. 
 1. 수행 시간을 줄이기 위한 묘기는 따로 필요하지 않습니다. 
-물론 실제로 시간 복잡도를 개선하는 것이 불가능한 것은 아니나, 문제의 제한인 N <= 100은 모든 가능한 세 카드의 조합을 1초 내에 뽑아보는 데에 전혀 무리가 없는 제한이기 때문에 전부 해보아도 되고, 반면에 증명할 수 없는 방법으로 탐색을 중도에 종료하도록 하는 것은 매우 위험합니다.
+물론 실제로 시간 복잡도를 개선하는 것이 불가능한 것은 아니나, 
+문제의 제한인 N <= 100은 모든 가능한 세 카드의 조합을 1초 내에 뽑아보는 데에 전혀 무리가 없는 제한이기 때문에 
+전부 해보아도 되고, 반면에 증명할 수 없는 방법으로 탐색을 중도에 종료하도록 하는 것은 매우 위험합니다.
 n(n-1)(n-2)
 ----------    : 전체 경우의 수는 약, C(n,3) 최대 1,000,000 임( 백만은 컴퓨터가 충분히 계산할 수 있으므로 완전탐색방법으로 문제 풀이) 
 3!
@@ -40,7 +41,8 @@ n(n-1)(n-2)
    그것 때문에 따져보지 못하는 경우가 생깁니다.
 */
 
-/* Wrong implementation
+/* 
+----------Wrong implementation-----------
 #include<iostream>
 #include<cstdio>
 #include<algorithm>
@@ -62,7 +64,7 @@ int main()
 		int num;
 		scanf("%d", &num);
 		v.push_back(num);
-    } 
+	} 
 	sort(v.begin(), v.end(), compare);
 	
 	int sum = 0;
@@ -85,8 +87,6 @@ int main()
 			break;
 		}
 	}
-
-	
 	return 0;
 }
 */
