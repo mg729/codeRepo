@@ -1,9 +1,10 @@
 #include<iostream>
 #include<cstdio>
 #include<vector>
+#include<stack>
 using namespace std;
 
-vector<int> v;
+stack<int> s;
 vector<char> vc;
  
 int main()
@@ -11,43 +12,34 @@ int main()
 	int n;
 	scanf("%d", &n);
 	
+	int num = 1;
 	for(int i = 0; i < n ; ++i)
 	{
 		int val;
 		scanf("%d", &val);
-		v.push_back(val);
-	}
-	
-	int sum = n*2;
-	int cmp = 0;
-	for(int i = 0; i < n-1 ; ++i)
-	{
-		if(v[i] > v[i+1])
+		
+		while(num <= val)
 		{
-			int num = v[i] - cmp;
-			while(num)
-			{
-				vc.push_back('+');
-				cmp = num;
-				--sum;
-				--num;
-			}
+			s.push(num);
+			++num;
+			vc.push_back('+');
+		}
+		if(s.top()==val)
+		{
+			s.pop();
+			vc.push_back('-');
 		}
 		else
 		{
-			vc.push_back('-');
-			--sum;
+			printf("NO");
+			return 0;
 		}
 	}
-	if(sum)
-		printf("NO");
-	else
+	for(auto result: vc)
 	{
-		for(int i = 0; i < n; i++)
-		{
-			printf("%c", vc[i]);
-		}
+		printf("%c\n", result);
 	}
+	
 	return 0;
 }
 
