@@ -13,7 +13,7 @@ int main()
 		int n,m;
 		cin >> n;
 		cin >> m;
-		vector<pair<bool, int>> v;
+		vector < pair<bool, int> > v;
 		
 		int key;
 		for(int index = 0; index < n; ++index)
@@ -33,16 +33,17 @@ int main()
 		while(1)
 		{
 			int maxval = 0;
-			for(int i = 0; i < v.size(); i++)
+			for(int i = 0; i < v.siz.size(); i++)
 			{
 				maxval = max(maxval, v[i].second);
 			}
 			
 			if(v[0].second != maxval)
 			{
-				int value = v[0].second;
+//				int value = v[0].second;  //error
+				v.push_back(v.front());
 				v.erase(v.begin());
-				v.push_back(pair<bool, int>(false, value));
+//				v.push_back(pair<bool, int>(false, value));  //error
 			}
 			else if(v[0].second == maxval)
 			{
