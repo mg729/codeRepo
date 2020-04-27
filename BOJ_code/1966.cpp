@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 int main()
 {
 	int tc; 
@@ -12,38 +11,44 @@ int main()
 	for(int i = 0; i < tc; ++i)
 	{
 		int n,m;
-		cin >> n >> m ;
-		vector<int> v;
+		cin >> n;
+		cin >> m;
+		vector<pair<bool, int>> v;
 		
+		int key;
 		for(int index = 0; index < n; ++index)
 		{
 			int importance;
 			cin >> importance;
-			v.push_back(importance);
+			if(index == m)
+			{
+				key = importance;
+				v.push_back(pair<bool, int>(true, importance));
+			}
+			v.push_back(pair<bool, int>(false, importance));
 		}
 		
-		int key = v[m];
 		int print = 1;
 		
 		while(1)
 		{
 			int maxval = 0;
-			for(int i = 0; i <v.size(); i++)
+			for(int i = 0; i < v.size(); i++)
 			{
-				maxval = max(maxval, v[i]);
+				maxval = max(maxval, v[i].second);
 			}
 			
-			if(v.front() != maxval)
+			if(v[0].second != maxval)
 			{
-				int value = v.front();
+				int value = v[0].second;
 				v.erase(v.begin());
-				v.push_back(value);
+				v.push_back(pair<bool, int>(false, value));
 			}
-			else if(v.front() == maxval)
+			else if(v[0].second == maxval)
 			{
-				if(v.front() == key)
+				if(v[0].second == key && v[0].first == true)
 				{
-					cout <<print <<endl;
+					cout << print <<endl;
 					break;
 				}
 				else
