@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-
+#include<queue>
 using namespace std;
 
 int main()
@@ -13,7 +13,8 @@ int main()
 		int n,m;
 		cin >> n;
 		cin >> m;
-		vector < pair<bool, int> > v;
+		queue<pair<bool, int>> q;
+		priority_queue<int> pq;
 		
 		int key;
 		for(int index = 0; index < n; ++index)
@@ -23,38 +24,33 @@ int main()
 			if(index == m)
 			{
 				key = importance;
-				v.push_back(pair<bool, int>(true, importance));
+				q.push({true, importance});
+				pq.push(importance);
 			}
-			v.push_back(pair<bool, int>(false, importance));
+			q.push({false, importance});
+			pq.push(importance);
 		}
 		
 		int print = 1;
 		
 		while(1)
-		{
-			int maxval = 0;
-			for(int i = 0; i < v.siz.size(); i++)
+		{			
+			if(q.front().second != pq.top())
 			{
-				maxval = max(maxval, v[i].second);
+				q.push(q.front());
+				q.pop();
 			}
-			
-			if(v[0].second != maxval)
+			else if(q.front().second == pq.top())
 			{
-//				int value = v[0].second;  //error
-				v.push_back(v.front());
-				v.erase(v.begin());
-//				v.push_back(pair<bool, int>(false, value));  //error
-			}
-			else if(v[0].second == maxval)
-			{
-				if(v[0].second == key && v[0].first == true)
+				pq.pop();
+				if(q.front().second == key && q.front().first == true)
 				{
 					cout << print <<endl;
 					break;
 				}
 				else
 				{
-					v.erase(v.begin());
+					q.pop();
 					print++;
 				}
 			}
