@@ -12,4 +12,14 @@
 
 * [스택 수열](https://www.acmicpc.net/problem/1874): ([C++ 답안](1874.cpp))  
 * [프린터 큐](https://www.acmicpc.net/problem/1966): ([C++ 답안](1966.cpp)/[우선순위 큐에대한 이해](https://en.cppreference.com/w/cpp/container/priority_queue))  
-* [키로거](https://www.acmicpc.net/problem/5397): ([C++ 답안]())  
+* [키로거](https://www.acmicpc.net/problem/5397): ([C++ 답안](5397.cpp))  
+
+### Chapter 02. 고급 자료구조
+
+> 해시, 집합을 활용한 문제풀이
+
+
+#### [03] [핵심 유형 문제풀이]
+* [수 찾기](https://www.acmicpc.net/problem/1920): ([C++ 답안]())
+* [친구 네트워크](https://www.acmicpc.net/problem/4195): ([C++ 답안]())
+
