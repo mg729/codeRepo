@@ -12,7 +12,7 @@
 
 * [스택 수열](https://www.acmicpc.net/problem/1874): ([C++ 답안](1874.cpp))  
 * [프린터 큐](https://www.acmicpc.net/problem/1966): ([C++ 답안](1966.cpp)/[우선순위 큐에대한 이해](https://en.cppreference.com/w/cpp/container/priority_queue))  
-* [키로거](https://www.acmicpc.net/problem/5397): ([C++ 답안](5397.cpp))  
+* [키로거](https://www.acmicpc.net/problem/5397): ([C++ 답안](5397.cpp) / [std::reverse](https://en.cppreference.com/w/cpp/algorithm/reverse))  
 
 ### Chapter 02. 고급 자료구조
 
