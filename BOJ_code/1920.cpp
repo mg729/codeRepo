@@ -15,7 +15,7 @@ int main()
 	{
 		int val;
 		scanf("%d", &val);
-		s.insert(val);
+		s.insert(val);   //set container insert data by using "insert" member function
 	}
 	
 	int m;
@@ -30,8 +30,7 @@ int main()
 	}
 	
 	for(auto x : v)
-		printf("%d\n", s.count(x));
-
+		printf("%d\n", s.count(x));  //count member function returns only 1 or 0
 	
 	return 0;
 }
