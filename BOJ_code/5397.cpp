@@ -60,7 +60,7 @@ int main()
 
 		while(!right_s.empty())
 		{
-			left_s.push(right_s.top());
+			left_s.(right_s.top());
 			right_s.pop();
 		}
 		while(!left_s.empty())
@@ -80,3 +80,8 @@ int main()
 	
 	return 0;
 }
+/**
+※입력값기준
+십만까지는 시뮬레이션 방식 허용
+백만부터는 시뮬레이션 방식 허용 안됨
+*/
