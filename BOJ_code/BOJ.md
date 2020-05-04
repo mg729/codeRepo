@@ -26,5 +26,5 @@
     * [std::find](https://en.cppreference.com/w/cpp/algorithm/find) - `defined in header <algorithm>`  
     * [중복을 허용하지 않는 데이터 컨테이너 set](https://en.cppreference.com/w/cpp/container/set)  
     * [count function : member function of set](https://en.cppreference.com/w/cpp/container/set/count)  
-* [친구 네트워크](https://www.acmicpc.net/problem/4195): ([C++ 답안]())
+* [친구 네트워크](https://www.acmicpc.net/problem/4195): ([C++ 답안](4195.cpp))
 
