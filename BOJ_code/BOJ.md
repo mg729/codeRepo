@@ -27,8 +27,20 @@
     * [중복을 허용하지 않는 데이터 컨테이너 set](https://en.cppreference.com/w/cpp/container/set)  
     * [count function : member function of set](https://en.cppreference.com/w/cpp/container/set/count)  
 * [친구 네트워크](https://www.acmicpc.net/problem/4195): ([C++ 답안](4195.cpp))  
-    * Union-Find 알고리즘  <!--TIL Blog concept update is needed and need to solve the problem again in the future-->
+    * **Union-Find 알고리즘**  <!--TIL Blog concept update is needed and need to solve the problem again in the future-->
     * [C++ 문자열](https://mg729.github.io/c++/2019/10/09/C++_String/)  
         * do not use **cin, cout** for string type data  
         * scanf("%s", string data) is not working (scanf does not reads **string** but reads **char** type data)   
 
+### Chapter 03. 기본 정렬 알고리즘
+
+> 정렬 라이브러리, 키(Key) 기반 정렬, 계수 정렬을 활용한 문제풀이
+
+#### [04] [기초 문제풀이]  
+* [수 정렬하기](https://www.acmicpc.net/problem/2750): ([C++ 답안]())  
+* [소트인사이드](https://www.acmicpc.net/problem/1427): ([C++ 답안]())  
+
+#### [05] [핵심 유형 문제풀이]  
+* [나이순 정렬](https://www.acmicpc.net/problem/10814): ([C++ 답안]())  
+* [좌표 정렬하기](https://www.acmicpc.net/problem/11650): ([C++ 답안]())  
+* [수 정렬하기 3](https://www.acmicpc.net/problem/10989): ([C++ 답안]())  
