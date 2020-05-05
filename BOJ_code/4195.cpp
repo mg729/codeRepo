@@ -1,9 +1,15 @@
 #include <iostream>
-#include <cstdio>
-#include <string>
-#include <algorithm>
 #include <set>
 
+/**
+Below solution has error problem
+
+4
+Ann Ben 2
+Carl David 2
+Evan Fred 2
+Betty Fred 7 --> not 7 but should be 3 
+*/
 using namespace std;
 
 int main()
@@ -18,33 +24,9 @@ int main()
 		set <string> vfs;
 		for(int i = 0; i <numberVf; ++i)
 		{
-			set <string> s;
-			
-			cin.clear();
-			fflush(stdin);
-			
-			string friendship;
-			getline(cin, friendship);
-			
-			string a;
-			string b;
-			int idx;
-			for(idx = 0; idx < friendship.size(); ++idx)
-			{
-				if(friendship[idx] == ' ')
-				{
-					++idx;
-					break;	
-				}
-				a.append(1,friendship[idx]);
-			}
-			for( ; idx <friendship.size(); ++idx)
-			{
-				b.append(1,friendship[idx]);
-			}
-			
-			s.insert(a);
-			s.insert(b);
+			char a[21] = {0,};
+			char b[21] = {0,};
+			scanf("%s %s", &a, &b);
 			
 			if(!vfs.count(a) && !vfs.count(b))
 			{
@@ -58,6 +40,9 @@ int main()
 				vfs.insert(b);
 				printf("%d\n", vfs.size());
 			}
+			for(auto x : vfs)
+				cout << x << " ";
+			cout << endl;
 		}	
 	}
 	return 0;
