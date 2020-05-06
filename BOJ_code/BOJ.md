@@ -35,9 +35,13 @@
 ### Chapter 03. 기본 정렬 알고리즘
 
 > 정렬 라이브러리, 키(Key) 기반 정렬, 계수 정렬을 활용한 문제풀이
+> [C++ 정렬 기초 컨셉](https://mg729.github.io/c++/2020/03/30/C++_sort/)  
+> 'sort() function is defined in <algorithm>'  
 
 #### [04] [기초 문제풀이]  
-* [수 정렬하기](https://www.acmicpc.net/problem/2750): ([C++ 답안]())  
+* [수 정렬하기](https://www.acmicpc.net/problem/2750): ([C++ 답안](2750.cpp))
+    * std::set is an associative container that contains a **sorted set** of **unique** objects of type Key  
+    * set 컨테이너는 중복을 허용하지 않는 정렬된 컨테이너  
 * [소트인사이드](https://www.acmicpc.net/problem/1427): ([C++ 답안]())  
 
 #### [05] [핵심 유형 문제풀이]  
