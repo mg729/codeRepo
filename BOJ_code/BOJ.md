@@ -37,6 +37,7 @@
 > 정렬 라이브러리, 키(Key) 기반 정렬, 계수 정렬을 활용한 문제풀이  
 > [C++ 정렬 기초 컨셉](https://mg729.github.io/c++/2020/03/30/C++_sort/)  
 > `sort() function is defined in <algorithm>`  
+> sort의 매개변수 compare는 **bool 타입**이다. `bool cmp(const Type1 &a, const Type2 &b);`  
 
 #### [04] [기초 문제풀이]  
 * [수 정렬하기](https://www.acmicpc.net/problem/2750): ([C++ 답안](2750.cpp))
