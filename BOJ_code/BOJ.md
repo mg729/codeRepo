@@ -43,7 +43,10 @@
 * [수 정렬하기](https://www.acmicpc.net/problem/2750): ([C++ 답안](2750.cpp))
     * std::set is an associative container that contains a **sorted set** of **unique** objects of type Key  
     * set 컨테이너는 중복을 허용하지 않는 정렬된 컨테이너  
-* [소트인사이드](https://www.acmicpc.net/problem/1427): ([C++ 답안]())  
+* [소트인사이드](https://www.acmicpc.net/problem/1427): ([C++ 답안](1427.cpp))  
+    * **Notice** : In *char* type array and *string* type, a null character ('\0') has been added in order to indicate the end of the sequence.  
+        * '0' refers to the character zero, which has an ASCII value of 48  
+        * '\0' refers to the null character (ASCII value 0), or a number of value 0  
 
 #### [05] [핵심 유형 문제풀이]  
 * [나이순 정렬](https://www.acmicpc.net/problem/10814): ([C++ 답안]())  

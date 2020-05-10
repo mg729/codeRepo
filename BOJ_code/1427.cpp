@@ -1,31 +1,17 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+
 using namespace std;
 
-bool cmp(int a, int b)
-{
-	return a > b;
-}
+string n;
 
-int main()
-{
-	int n;
+int main() {
 	cin >> n;
-	
-	vector <int> v;
-	
-	while(n)
+	for(int i = 9 ; i >= 0 ; --i)
 	{
-		v.push_back(n%10);
-		n -= (n%10);
-		n /= 10;
+		for(char x : n)
+		{
+			if(x - '0' == i)
+				cout << x;
+		}
 	}
-	
-	sort(v.begin(), v.end(), cmp);
-	
-	for(auto x: v)
-		cout << x;
-		
-	return 0;
-} 
+}
