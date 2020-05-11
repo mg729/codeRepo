@@ -54,5 +54,6 @@
     * `stable_sort()`: *sorts a range of elements while preserving order between equal elements*  
         * `stable_sort` : 정렬을 하되 원소들 간의 순서를 보존합니다. 만약에 벡터에 [a, b] 순으로 있었는데, a 와 b 가 크기가 같다면 정렬을 [a,b] 혹은 [b,a] 로 할 수 있습니다. **sort** 의 경우 그 순서가 랜덤으로 정해집니다. 하지만 **stable_sort** 의 경우 그 순서를 반드시 보존합니다. 즉 컨테이너 상에서 [a,b] 순으로 있엇다면 정렬 시에도 (크기가 같다면) [a,b] 순으로 나오게 됩니다. 이 때문에 sort 보다 좀 더 느립니다.  
 * [좌표 정렬하기](https://www.acmicpc.net/problem/11650): ([C++ 답안](11650.cpp))  
-    * 
+    * sort() : comparison function object which returns ​true if the first argument is less than the second.
+        * C++ 기본 정렬 라이브러리는 기본적으로 인덱그 순서대로 오름차순으로 정렬  
 * [수 정렬하기 3](https://www.acmicpc.net/problem/10989): ([C++ 답안]())  
