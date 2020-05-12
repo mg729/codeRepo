@@ -55,5 +55,24 @@
         * `stable_sort` : 정렬을 하되 원소들 간의 순서를 보존합니다. 만약에 벡터에 [a, b] 순으로 있었는데, a 와 b 가 크기가 같다면 정렬을 [a,b] 혹은 [b,a] 로 할 수 있습니다. **sort** 의 경우 그 순서가 랜덤으로 정해집니다. 하지만 **stable_sort** 의 경우 그 순서를 반드시 보존합니다. 즉 컨테이너 상에서 [a,b] 순으로 있엇다면 정렬 시에도 (크기가 같다면) [a,b] 순으로 나오게 됩니다. 이 때문에 sort 보다 좀 더 느립니다.  
 * [좌표 정렬하기](https://www.acmicpc.net/problem/11650): ([C++ 답안](11650.cpp))  
     * sort() : comparison function object which returns ​true if the first argument is less than the second.  
-        * C++ 기본 정렬 라이브러리는 기본적으로 인덱그 순서대로 오름차순으로 정렬  
-* [수 정렬하기 3](https://www.acmicpc.net/problem/10989): ([C++ 답안]())  
+        * C++ 기본 정렬 라이브러리는 기본적으로 인덱스 순서대로 오름차순으로 정렬  
+* [수 정렬하기 3](https://www.acmicpc.net/problem/10989): ([C++ 답안](10989.cpp))  
+    * **계수정렬 알고리즘 (Counting Sort)**  
+    > 데이터의 개수가 많은 대신 데이터의 범위가 좁은 경우 계수정렬 알고리즘을 활용
+    > 배열의 인덱스를 특정한 데이터의 값으로 여기는 정렬 방법  
+    > 배열의 크기는 데이터의 범위를 포함할 수 있도록 설정  
+    > 데이터가 등장한 횟수를 카운팅  
+     
+
+    * for 루프 내에서는 scanf, printf사용 권장  
+    * for 루프 내에서 cin, cout 쓰는 것은 시간 초과 에러 원인일 수 있음  
+
+### Chapter 04. 재귀 호출
+
+> 기본적인 재귀 함수 구현을 활용한 문제풀이
+
+#### [06] [핵심 유형 문제풀이]
+* [피보나치 수](https://www.acmicpc.net/problem/2747): ([C++ 답안]())  
+* [Z](https://www.acmicpc.net/problem/1074): ([C++ 답안]())  
+* [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안]())  
+
