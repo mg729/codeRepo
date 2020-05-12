@@ -72,7 +72,8 @@
 > 기본적인 재귀 함수 구현을 활용한 문제풀이
 
 #### [06] [핵심 유형 문제풀이]
-* [피보나치 수](https://www.acmicpc.net/problem/2747): ([C++ 답안]())  
+* [피보나치 수](https://www.acmicpc.net/problem/2747): ([C++ 답안](2747.cpp))  
+    * 문제의 취지 : 재귀함수의 느린 연산 속도(시간)를 해결하기 위해서 **동적계획법**을 활용  
 * [Z](https://www.acmicpc.net/problem/1074): ([C++ 답안]())  
 * [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안]())  
 
