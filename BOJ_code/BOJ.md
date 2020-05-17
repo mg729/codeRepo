@@ -85,5 +85,95 @@
     * sqrt(100) = 10  
     * *global 변수를 재귀함수 내에서 바로 print out*    
     * *입력 좌표 (r, c)도 global 변수로 지정*  
-* [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안](7490.cpp))  
+* [0 만들기](https://www.acmicpc.net/problem/7490)
+    * python : *eval()* 함수 활용  
 
+
+### Chapter 05. 고급 정렬 알고리즘
+
+> 병합 정렬을 활용한 문제풀이
+
+#### [07] [핵심 유형 문제풀이]  
+* [수 정렬하기 2](https://www.acmicpc.net/problem/2751):([C++ 답안]())  
+* [K 번째 수](https://www.acmicpc.net/problem/11004): ([C++ 답안]())  
+
+### Chapter 06. 기본 탐색 알고리즘
+
+> 순차 탐색, 이진 탐색을 활용한 문제풀이
+
+#### [08] [기초 문제풀이]
+* [문서 검색](https://www.acmicpc.net/problem/1543): ([C++ 답안]())  
+* [새](https://www.acmicpc.net/problem/1568): ([C++ 답안]())  
+* [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안]())  
+* [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안]())  
+* [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안]())  
+
+#### [09] [핵심 유형 문제풀이]
+* [공유기 설치](https://www.acmicpc.net/problem/2110): ([C++ 답안]())  
+
+### Chapter 07. 고급 탐색 알고리즘
+
+> 트리 순회, 힙 (우선순위 큐), 위상 정렬을 활용한 문제풀이
+
+#### [10] [핵심 유형 문제풀이]
+* [최소 힙](https://www.acmicpc.net/problem/1927): ([C++ 답안]())  
+* [카드 정렬하기](https://www.acmicpc.net/problem/1715): ([C++ 답안]())  
+
+
+### Chapter 08. 동적 프로그래밍
+
+> 잘 알려진 동적 프로그래밍 개념 (타일링, Knapsack, LCS, LIS 등)을 활용한 문제풀이
+
+#### [11] [기초 문제풀이]
+* [01타일](https://www.acmicpc.net/problem/1904): ([C++ 답안]())  
+* [평범한 배낭](https://www.acmicpc.net/problem/12865): ([C++ 답안]())  
+* [가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053): ([C++ 답안]())  
+
+#### [12] [핵심 유형 문제풀이]
+* [LCS](https://www.acmicpc.net/problem/9251): ([C++ 답안]())  
+* [기타리스트](https://www.acmicpc.net/problem/1495): ([C++ 답안]())  
+
+
+### Chapter 09. 그래프 기본 탐색 알고리즘
+
+> DFS와 BFS를 활용한 문제풀이
+
+#### [13] [기초 문제풀이]
+* [DFS와 BFS](https://www.acmicpc.net/problem/1260): ([C++ 답안]())  
+* [숨바꼭질](https://www.acmicpc.net/problem/1697): ([C++ 답안]())  
+
+#### [14] [핵심 유형 문제풀이]
+* [바이러스](https://www.acmicpc.net/problem/2606): ([C++ 답안]())  
+* [유기농 배추](https://www.acmicpc.net/problem/1012): ([C++ 답안]())  
+* [효율적인 해킹](https://www.acmicpc.net/problem/1325): ([C++ 답안]())  
+
+### Chapter 10. 그래프 고급 탐색 알고리즘
+
+> 다익스트라 최단 경로 알고리즘, 최소 신장 트리 알고리즘을 활용한 문제풀이
+
+#### [15] [핵심 유형 문제풀이]
+* [해킹](https://www.acmicpc.net/problem/10282): ([C++ 답안]())  
+* [거의 최단 경로](https://www.acmicpc.net/problem/5719): ([C++ 답안]())  
+* [우주신과의 교감](https://www.acmicpc.net/problem/1774): ([C++ 답안]())  
+
+### Chapter 11. 탐욕 알고리즘
+
+> 그리디(Greedy) 알고리즘의 원리를 활용한 문제풀이
+
+#### [16] [기초 문제풀이]
+* [거스름돈](https://www.acmicpc.net/problem/5585): ([C++ 답안]())  
+* [뒤집기](https://www.acmicpc.net/problem/1439): ([C++ 답안]())  
+* [등수 매기기](https://www.acmicpc.net/problem/2012): ([C++ 답안]())  
+* [배](https://www.acmicpc.net/problem/1092): ([C++ 답안]())  
+
+#### [17] [핵심 유형 문제풀이]
+* [센서](https://www.acmicpc.net/problem/2212): ([C++ 답안]())  
+* [도서관](https://www.acmicpc.net/problem/1461): ([C++ 답안]())  
+* [컵라면](https://www.acmicpc.net/problem/1781): ([C++ 답안]())  
+
+### Chapter 12. 백 트래킹
+
+> DFS 혹은 조합(Combinations)을 활용한 문제풀이
+
+#### [18] [핵심 유형 문제풀이]
+* [N-Queen](https://www.acmicpc.net/problem/9663):  ([C++ 답안]())  
