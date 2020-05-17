@@ -79,5 +79,11 @@
     
 
 * [Z](https://www.acmicpc.net/problem/1074): ([C++ 답안](1074.cpp))  
+    * __std::pow__  `defined in header <cmath>`  
+    * pow(2, 10) = 1024  
+    * __std::sqrt__  `defined in header <cmath>`   
+    * sqrt(100) = 10  
+    * *global 변수를 재귀함수 내에서 바로 print out*    
+    * *입력 좌표 (r, c)도 global 변수로 지정*  
 * [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안](7490.cpp))  
 
