@@ -79,5 +79,5 @@
     
 
 * [Z](https://www.acmicpc.net/problem/1074): ([C++ 답안](1074.cpp))  
-* [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안]())  
+* [0 만들기](https://www.acmicpc.net/problem/7490): ([C++ 답안](7490.cpp))  
 
