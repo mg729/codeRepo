@@ -95,7 +95,7 @@
 
 #### [07] [핵심 유형 문제풀이]  
 * [수 정렬하기 2](https://www.acmicpc.net/problem/2751):([C++ 답안](2751.cpp))  
-* [K 번째 수](https://www.acmicpc.net/problem/11004): ([C++ 답안]())  
+* [K 번째 수](https://www.acmicpc.net/problem/11004): ([C++ 답안](11004.cpp))  
 
 ### Chapter 06. 기본 탐색 알고리즘
 
