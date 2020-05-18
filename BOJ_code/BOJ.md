@@ -102,7 +102,14 @@
 > 순차 탐색, 이진 탐색을 활용한 문제풀이
 
 #### [08] [기초 문제풀이]
-* [문서 검색](https://www.acmicpc.net/problem/1543): ([C++ 답안]())  
+* [문서 검색](https://www.acmicpc.net/problem/1543): ([C++ 답안](1543.cpp))  
+    * [substr()](https://en.cppreference.com/w/cpp/string/basic_string/substr) :  __substr__( size_type pos = 0, size_type count = npos )  
+        * __pos__ -	position of the first character to include  
+        * __count__	- length of the substring  
+    * npos 는 -1을 의미  
+    * string::find() 는 0이나오는 경우가 있음 - string의 첫번째 요소를 찾아낸 경우 0을 반환  
+    * 예외상황 체크!!주의  
+
 * [새](https://www.acmicpc.net/problem/1568): ([C++ 답안]())  
 * [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안]())  
 * [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안]())  
