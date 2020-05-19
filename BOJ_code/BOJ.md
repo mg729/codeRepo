@@ -109,13 +109,14 @@
         * __count__	- length of the substring  
         * 실제로 string에서 데이터를 삭제하지는않고 substr한 결과를 show 하는 역할  
     * npos 는 -1을 의미  
-    * string::find() 는 0이나오는 경우가 있음 - string의 첫번째 요소를 찾아낸 경우 0을 반환  
+    * string::__find()__ 는 0이나오는 경우가 있음 - string의 첫번째 요소를 찾아낸 경우 0을 반환  
     * 예외상황 체크!!주의  
 
 * [새](https://www.acmicpc.net/problem/1568): ([C++ 답안](1568.cpp))  
-* [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안]())  
-* [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안]())  
-* [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안]())  
+* [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안](1302.cpp))  
+    * __map__ container : 등장 횟수를 계산할 때 활용하는 컨테이너  
+* [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안](1668.cpp))  
+* [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안](1236.cpp))  
 
 #### [09] [핵심 유형 문제풀이]
 * [공유기 설치](https://www.acmicpc.net/problem/2110): ([C++ 답안]())  
