@@ -1,29 +1,26 @@
 #include <iostream>
-#include <cstdio>
 #include <string>
-#include <algorithm>
 using namespace std;
+
+string s, cmp_s;
+int idx;
+int count;
 
 int main()
 {
-	string s;
+
 	getline(cin, s);
-	
-	string cmp_s;
 	getline(cin, cmp_s);
 	
-	int count = 0;
-	
-	size_t found = s.find(cmp_s);
-	
-	while(s.length() >= cmp_s.length() && found != string::npos)
+	while(s.length() - idx >= cmp_s.length())
 	{
-		string sub = s.substr(found, cmp_s.length());
-		for(auto x : sub)
-			s.erase(find(s.begin(), s.end(), x));
-		
-		++count;
-		found = s.find(cmp_s);
+		if(s.substr(idx, cmp_s.length()) == cmp_s)
+		{
+			idx += cmp_s.length();
+			++count;
+		}
+		else
+			idx++;
 	}
 	
 	cout << count;
