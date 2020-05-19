@@ -112,7 +112,7 @@
     * string::find() 는 0이나오는 경우가 있음 - string의 첫번째 요소를 찾아낸 경우 0을 반환  
     * 예외상황 체크!!주의  
 
-* [새](https://www.acmicpc.net/problem/1568): ([C++ 답안]())  
+* [새](https://www.acmicpc.net/problem/1568): ([C++ 답안](1568.cpp))  
 * [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안]())  
 * [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안]())  
 * [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안]())  
