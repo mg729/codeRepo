@@ -6,8 +6,9 @@
 * [음계](https://www.acmicpc.net/problem/2920): ([C++ 답안](2920.cpp))
 * [블랙잭](https://www.acmicpc.net/problem/2798): ([C++ 답안](2798.cpp))
 
-#### [02] [핵심 유형 문제풀이]
-> 벡터, 큐, 스택을 활용한 문제풀이
+#### [02] [핵심 유형 문제풀이]  
+> 벡터, 큐, 스택을 활용한 문제풀이  
+> queue<pair<int,int>> 이런 식으로 >>가 두개 붙어 있으면 비트 연산자 처리 되서 > > 띄어서 써야함  
 
 
 * [스택 수열](https://www.acmicpc.net/problem/1874): ([C++ 답안](1874.cpp))  
@@ -106,6 +107,7 @@
     * [substr()](https://en.cppreference.com/w/cpp/string/basic_string/substr) :  __substr__( size_type pos = 0, size_type count = npos )  
         * __pos__ -	position of the first character to include  
         * __count__	- length of the substring  
+        * 실제로 string에서 데이터를 삭제하지는않고 substr한 결과를 show 하는 역할  
     * npos 는 -1을 의미  
     * string::find() 는 0이나오는 경우가 있음 - string의 첫번째 요소를 찾아낸 경우 0을 반환  
     * 예외상황 체크!!주의  
