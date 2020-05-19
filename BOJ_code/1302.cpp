@@ -1,10 +1,9 @@
 #include <iostream>
 #include <cstdio>
-#include <vector>
-#include <algorithm>
+#include <map>
 using namespace std;
 
-vector<pair<string, int>> sales;
+map<string, int> sales;
 
 int main()
 {
@@ -16,38 +15,23 @@ int main()
 		string s;
 		cin >> s;
 		
-		bool isExist = false;
-		
-		for(auto x : sales)
-		{
-			if(x.first == s)
-			{
-				isExist = true;
-				int val = x.second;
-				sales.erase(find(sales.begin(), sales.end(), x));
-				sales.push_back({s,++val});
-				break;
-			}
-		}
-		if(!isExist)
-			sales.push_back({s, 1});
-			
+		sales[s]++;
 	}
 	
-	sort(sales.begin(), sales.end());
-	
 	int maxval = 0;
-	for(auto x: sales) 
-		maxval = max(maxval, x.second);
-	
-	for(auto x : sales)
+	for(auto it = sales.begin(); it != sales.end(); it++)
 	{
-		if(x.second == maxval)
+		maxval = max(maxval, it->second);
+	}
+	
+	for(auto it = sales.begin(); it != sales.end(); it++)
+	{
+		if(maxval == it->second)
 		{
-			cout << x.first;
+			cout << it->first;
 			break;
 		}
-	}	
+	}
 
 	
 	return 0;

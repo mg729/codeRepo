@@ -115,6 +115,15 @@
 * [새](https://www.acmicpc.net/problem/1568): ([C++ 답안](1568.cpp))  
 * [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안](1302.cpp))  
     * __map__ container : 등장 횟수를 계산할 때 활용하는 컨테이너  
+    * std::map is a __sorted__ associative container that contains key-value pairs with __unique keys.__  
+    * __iterator__활용한 for 루프 순회  
+    ```c++
+    for(auto it = sales.begin(); it != sales.end(); it++)
+	{
+		maxval = max(maxval, it->second);
+	}
+    ```
+    
 * [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안](1668.cpp))  
 * [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안](1236.cpp))  
 
