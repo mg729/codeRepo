@@ -116,7 +116,7 @@
 * [베스트셀러](https://www.acmicpc.net/problem/1302): ([C++ 답안](1302.cpp))  
     * __map__ container : 등장 횟수를 계산할 때 활용하는 컨테이너  
     * `map <key, value>` : key는 정렬될 값, value는 key를 기준으로 저장될 값을 의미  
-        * 중복된 key값을 허용하지 안함  
+        * 중복된 key값을 허용 안함  
 
     * std::map is a __sorted__ associative container that contains key-value pairs with __unique keys.__   
         * map 정렬  
@@ -126,7 +126,15 @@
     ```c++
     for(auto it = sales.begin(); it != sales.end(); it++)
 	{
-		maxval = max(maxval, it->second);
+		maxval = max(maxval, it->second); //it->second : value of the corresponding key of the map
+	}
+    for(auto it = sales.begin(); it != sales.end(); it++)
+	{
+		if(maxval == it->second)
+		{
+			cout << it->first; // it->first : key of the map
+			break;
+		}
 	}
     ```
     
