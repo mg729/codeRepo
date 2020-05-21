@@ -140,6 +140,12 @@
     
 * [트로피 진열](https://www.acmicpc.net/problem/1668): ([C++ 답안](1668.cpp))  
 * [성 지키기](https://www.acmicpc.net/problem/1236): ([C++ 답안](1236.cpp))  
+    * __getchar()__ : clear the buffer  
+    * 2차원 배열의 데이터 입력받기  
+    ```c++
+    cin >> array[i][j];
+    ```
+
 
 #### [09] [핵심 유형 문제풀이]
 * [공유기 설치](https://www.acmicpc.net/problem/2110): ([C++ 답안]())  
