@@ -1,8 +1,12 @@
 #include <iostream>
 #include <cstdio>
+
 using namespace std;
 
-char castle[50][50];
+char c;
+int row[50];
+int col[50];
+int rowCount, colCount;
 
 int main()
 {
@@ -13,52 +17,32 @@ int main()
 	{
 		for(int j = 0; j < m; j++)
 		{
-//			char c;
-//			scanf("%c", &c);
-//			castle[i][j] = c;
-			cin >> castle[i][j];
+			cin >> c;
+			if(c == 'X')
+			{
+				row[i] = 1;
+				col[j] = 1;
+			}
 		}
-//		getchar(); //clear buffer
 	}
-
-	int col = 0;
-	bool isExist = false;
 	
 	for(int i = 0; i < n; i++)
 	{
-		isExist = false;
-		for(int j = 0; j < m; j++)
+		if(!row[i])
 		{
-			if(castle[i][j] == 'X')
-			{
-				isExist = true;
-				break;
-			}
-		}
-		if(!isExist)
-			col++;
-		
+			++rowCount;
+		}	
 	}
-
 	
-	int row = 0;
-	isExist = false;
-	for(int i = 0; i < n; i++)
+	for(int j = 0; j < m; j++)
 	{
-		isExist = false;
-		for(int j = 0; j < m; j++)
+		if(!col[j])
 		{
-			if(castle[j][i] == 'X')
-			{
-				isExist = true;
-				break;
-			}
-		}
-		if(!isExist)
-			row++;
+			++colCount;
+		}	
 	}
 	
-	printf("%d", max(col, row));
+	printf("%d", max(colCount, rowCount));
 	
 	return 0;
 }
