@@ -151,6 +151,7 @@
 
 #### [09] [핵심 유형 문제풀이]
 * [공유기 설치](https://www.acmicpc.net/problem/2110): ([C++ 답안](2110.cpp))  
+    * __Binary Search__ (이진탐색)  
 
 ### Chapter 07. 고급 탐색 알고리즘
 
