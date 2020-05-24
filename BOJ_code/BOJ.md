@@ -162,10 +162,24 @@
 
 ### Chapter 07. 고급 탐색 알고리즘
 
-> 트리 순회, 힙 (우선순위 큐), 위상 정렬을 활용한 문제풀이
+> 트리 순회, 힙 (**우선순위 큐**), 위상 정렬을 활용한 문제풀이
 
 #### [10] [핵심 유형 문제풀이]
-* [최소 힙](https://www.acmicpc.net/problem/1927): ([C++ 답안]())  
+* [최소 힙](https://www.acmicpc.net/problem/1927): ([C++ 답안](1927.cpp))  
+    * __TLE__ 주의 : Time Limit Exceeded 시간초과  
+    * C++에서는 기본적으로 __우선순위 큐__ 가 최대힙(Max Heap)  
+    * 우선순위 큐는 기본적으로 내림차순으로 정렬 - __최대힙__  
+    * 정렬 기준 변경(__최소힙__)  
+        * `priority_queue <[Data Type], [Container Type], [정렬 기준]>`  
+        * `priority_queue <int, vector<int> , greater<int>> pq;`  
+    * __최소힙__ 아예 음수로 push(-x) 입력하고 컨테이너 내부의 데이터용 벡터를 별도로 선언  
+        ```c++
+        priority_queue <int> pq;
+        vector<int> v;
+        
+        pq.push(-x);
+        v.push_back(-pq.top());
+        ```
 * [카드 정렬하기](https://www.acmicpc.net/problem/1715): ([C++ 답안]())  
 
 

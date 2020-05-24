@@ -1,9 +1,8 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <queue>
 using namespace std;
 
-vector<int> v;
+priority_queue <int, vector<int> , greater<int>> pq;
 
 int main()
 {
@@ -15,18 +14,17 @@ int main()
 		int val;
 		scanf("%d", &val);
 		if(val != 0)
-			v.push_back(val);
+			pq.push(val);
 		else
 		{
-			if(v.empty())
+			if(pq.empty())
 			{
 				printf("%d\n", 0);
 			}
 			else
 			{
-				sort(v.begin(), v.end());
-				printf("%d\n", v.front());
-				v.erase(v.begin());		
+				printf("%d\n", pq.top());
+				pq.pop();
 			}
 		}
 	}
