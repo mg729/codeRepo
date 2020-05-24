@@ -180,7 +180,7 @@
         pq.push(-x);
         v.push_back(-pq.top());
         ```
-* [카드 정렬하기](https://www.acmicpc.net/problem/1715): ([C++ 답안]())  
+* [카드 정렬하기](https://www.acmicpc.net/problem/1715): ([C++ 답안](1715.cpp))  
 
 
 ### Chapter 08. 동적 프로그래밍
