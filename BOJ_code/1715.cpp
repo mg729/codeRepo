@@ -19,6 +19,7 @@ int main()
 	}
 	
 	int cmp = 0;
+	int sum = 0;
 	while(pq.size() != 1)
 	{
 		int a = pq.top();
@@ -29,14 +30,10 @@ int main()
 		cmp = a + b;
 		pq.push(cmp);
 		pq2.push(cmp);
+		
+		sum += cmp;
 	}
 	
-	int sum = 0;
-	while(!pq2.empty())
-	{
-		sum += pq2.top();
-		pq2.pop();
-	}
 	cout << sum;
 	return 0;
 }
