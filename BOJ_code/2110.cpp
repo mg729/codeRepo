@@ -20,24 +20,36 @@ int main()
 	
 	sort(v.begin(), v.end());
 	
-	int start = v.front();
-	int mid = v.back();  // do not declare as 0 
-
-	while(c > 2)
+	int start = v[1] - v[0];     // minimum gap
+	int end = v[n-1] - v[0];   // maximum gap
+	int result = 0;
+	
+	while(start <= end)
 	{
-		if(n % 2 == 0)
-			n = n/2 - 1;
+		int mid = (start + end) / 2;
+		
+		int value = v[0];
+		
+		int cnt = 1;
+		
+		for(int i = 1; i < n; ++i) //starts from i as 1
+		{
+			if(v[i] >= value + mid)  // mid means gap
+			{
+				value = v[i];
+				cnt += 1;
+			}
+		}
+		
+		if(cnt >= c)
+		{
+			start = mid + 1; //update start value for minimize search datas' range
+			result = mid;
+		}
 		else
-			n = n/2;
-			
-		mid = v[n];
-		cout << mid <<endl;
-		v.erase(v.begin());
-		v.pop_back();
-
-		c -= 2;
+			end = mid - 1;  //update end value 
 	}
-	cout << mid - start;	
+	cout << result;	
 	
 	return 0;
 }
