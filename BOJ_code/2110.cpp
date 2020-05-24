@@ -20,15 +20,15 @@ int main()
 	
 	sort(v.begin(), v.end());
 	
-	int start = v[1] - v[0];     // minimum gap
-	int end = v[n-1] - v[0];   // maximum gap
+	int start = v[1] - v.front();     // minimum gap
+	int end = v.back() - v.front();   // maximum gap
 	int result = 0;
 	
 	while(start <= end)
 	{
 		int mid = (start + end) / 2;
 		
-		int value = v[0];
+		int value = v.front();
 		
 		int cnt = 1;
 		
