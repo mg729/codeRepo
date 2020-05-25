@@ -166,7 +166,7 @@
 
 #### [10] [핵심 유형 문제풀이]
 * [최소 힙](https://www.acmicpc.net/problem/1927): ([C++ 답안](1927.cpp))  
-    * __TLE__ 주의 : Time Limit Exceeded 시간초과  
+    * __TLE__ 주의 : *Time Limit Exceeded* 시간초과  
     * C++에서는 기본적으로 __우선순위 큐__ 가 최대힙(Max Heap)  
     * 우선순위 큐는 기본적으로 내림차순으로 정렬 - __최대힙__  
     * 정렬 기준 변경(__최소힙__)  
@@ -188,9 +188,10 @@
 > 잘 알려진 동적 프로그래밍 개념 (타일링, Knapsack, LCS, LIS 등)을 활용한 문제풀이
 
 #### [11] [기초 문제풀이]
-* [01타일](https://www.acmicpc.net/problem/1904): ([C++ 답안]())  
-* [평범한 배낭](https://www.acmicpc.net/problem/12865): ([C++ 답안]())  
-* [가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053): ([C++ 답안]())  
+* [01타일](https://www.acmicpc.net/problem/1904): ([C++ 답안](1904.cpp))  
+    * 
+* [평범한 배낭](https://www.acmicpc.net/problem/12865): ([C++ 답안](12865.cpp))  
+* [가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053): ([C++ 답안](11053.cpp))  
 
 #### [12] [핵심 유형 문제풀이]
 * [LCS](https://www.acmicpc.net/problem/9251): ([C++ 답안]())  
