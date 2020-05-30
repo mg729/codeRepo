@@ -2,71 +2,24 @@
 #include <cstdio>
 #include <string>
 using namespace std;
+using namespace std;
 
-string a,b;
-int adp[1001] = {};
-int bdp[1001] = {};
+string x, y;
+int dp[1001][1001];
 
-int main()
-{
-	cin >> a >> b;
-	int n = max(a.size(), b.size());
+int main() {
+	cin >> x >> y;
 	
-	for(int i = 0; i < a.size(); i++)
-	{
-		int maxLength = 0;
-		int index = i;
-		int j = 0;
-		while(index != a.size())
-		{
-			if(a[index] == b[j])
-			{
-				++maxLength;
-				index++;
+	for (int i = 1; i <= x.length(); i++) {
+		for (int j = 1; j <= y.length(); j++) {
+			if (x[i - 1] == y[j - 1]) {
+				dp[i][j] = dp[i - 1][j - 1] + 1;
 			}
-			
-			if(j == b.size()-1)
-				index++;
-			else
-				j++;
-		}
-		adp[i] = maxLength;
-	}
-	
-	int aMaxVal = 0;
-	for(int i = 0; i < n; i++)
-	{
-		aMaxVal = max(aMaxVal, adp[i]);
-	}
-	
-	for(int i = 0; i < b.size(); i++)
-	{
-		int maxLength = 0;
-		int index = i;
-		int j = 0;
-		while(index != b.size())
-		{			
-			if(b[index] == a[j])
-			{
-				++maxLength;
-				index++;
+			else {
+				dp[i][j] = max(dp[i][j - 1], dp[i - 1][j]);
 			}
-			
-			if(j == a.size()-1)
-				index++;
-			else
-				j++;
 		}
-		bdp[i] = maxLength;
 	}
 	
-	int bMaxVal = 0;
-	for(int i = 0; i < n; i++)
-	{
-		bMaxVal = max(bMaxVal, bdp[i]);
-	}
-	
-	cout << max(aMaxVal,bMaxVal);
-	
-	return 0;
+	cout << dp[x.length()][y.length()];
 }
