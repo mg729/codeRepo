@@ -1,5 +1,7 @@
 # BOJ  
 
+# 항상 코드 제출 전에 반례가 될만한 예시 케이스들을 다양하게 테스트 후 제출  
+
 ### Chapter 01. 기본 자료구조
 
 #### [01] [기초 문제풀이]
@@ -219,7 +221,7 @@
  
 
 #### [12] [핵심 유형 문제풀이]
-* [LCS](https://www.acmicpc.net/problem/9251): ([C++ 답안]())  
+* [LCS](https://www.acmicpc.net/problem/9251): ([C++ 답안](9251.cpp))  
     * __LCS__ : _Longest Common Subsequence_  
 * [기타리스트](https://www.acmicpc.net/problem/1495): ([C++ 답안]())  
 
