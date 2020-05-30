@@ -12,10 +12,10 @@ int main()
 	cin >> n;
 	dp[0] = 1;
 	cin >> num[0];
-	
+	//dp[i] i를 포함하는 가장 긴 LIS의 길이 
 	for(int i = 1; i < n ; i++)
 	{
-		int max = 0;
+		int max = 0; 
 		cin >> num[i];
 		for(int j = 0; j < i ; j++)
 		{
