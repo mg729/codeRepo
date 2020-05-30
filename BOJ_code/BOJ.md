@@ -53,7 +53,7 @@
 * [나이순 정렬](https://www.acmicpc.net/problem/10814): ([C++ 답안](10814.cpp))  
     * `sort()`: *sorts the elements*  
     * `stable_sort()`: *sorts a range of elements while preserving order between equal elements*  
-        * `stable_sort` : 정렬을 하되 원소들 간의 순서를 보존합니다. 만약에 벡터에 [a, b] 순으로 있었는데, a 와 b 가 크기가 같다면 정렬을 [a,b] 혹은 [b,a] 로 할 수 있습니다. **sort** 의 경우 그 순서가 랜덤으로 정해집니다. 하지만 **stable_sort** 의 경우 그 순서를 반드시 보존합니다. 즉 컨테이너 상에서 [a,b] 순으로 있엇다면 정렬 시에도 (크기가 같다면) [a,b] 순으로 나오게 됩니다. 이 때문에 sort 보다 좀 더 느립니다.  
+        * `stable_sort` : 정렬을 하되 원소들 간의 순서를 보존합니다. 만약에 벡터에 [a, b] 순으로 있었는데, a 와 b 가 크기가 같다면 정렬을 [a,b] 혹은 [b,a] 로 할 수 있습니다. **sort** 의 경우 그 순서가 랜덤으로 정해집니다. 하지만 **stable_sort** 의 경우 그 순서를 반드시 보존합니다. 즉 컨테이너 상에서 [a,b] 순으로 있었다면 정렬 시에도 (크기가 같다면) [a,b] 순으로 나오게 됩니다. 이 때문에 sort 보다 좀 더 느립니다.  
 * [좌표 정렬하기](https://www.acmicpc.net/problem/11650): ([C++ 답안](11650.cpp))  
     * sort() : comparison function object which returns ​true if the first argument is less than the second.  
         * C++ 기본 정렬 라이브러리는 기본적으로 인덱스 순서대로 오름차순으로 정렬  
@@ -210,14 +210,17 @@
     
 
     - n * m 의 2차원 벡터 선언 및 초기화  
-        - `vector< vector<int>> arr(6, vector<int>(5,0));`    
+        - `vector< vector<int> > arr(6, vector<int>(5,0));`    
         - int arr[6][5] 배열을 선언하고 0으로 초기화  
 
 
 * [가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053): ([C++ 답안](11053.cpp))  
+    * __LIS__ : _Longest Increasing Subsequence_  
+ 
 
 #### [12] [핵심 유형 문제풀이]
 * [LCS](https://www.acmicpc.net/problem/9251): ([C++ 답안]())  
+    * __LCS__ : _Longest Common Subsequence_  
 * [기타리스트](https://www.acmicpc.net/problem/1495): ([C++ 답안]())  
 
 
