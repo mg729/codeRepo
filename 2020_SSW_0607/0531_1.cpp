@@ -18,7 +18,7 @@ void swap(int index1, int index2)
 
 void numArr(int arrSize)
 {
-	if(arrSize == 1)
+	if(arrSize == 1) //종료부 - 원소 출력 
 	{
 		for(int i = 0; i < 7; i++)
 		{
@@ -29,9 +29,9 @@ void numArr(int arrSize)
 	}
 	for(int i = 0; i < arrSize; i++)
 	{
-		swap(i, arrSize-1);
-		numArr(arrSize-1);
-		swap(i, arrSize-1);
+		swap(i, arrSize-1); //해결부 
+		numArr(arrSize-1); //분할부 
+		swap(i, arrSize-1); //원상복귀 
 	}
 }
 
