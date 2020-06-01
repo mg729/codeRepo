@@ -31,11 +31,26 @@
         * __종료부__ : 재귀함수의 끝`if(n == 1) return 1;`  
         * __분할부__ : 재귀함수를 문제사이즈를 줄여서 호출하는 부분`recursiveSum(n-1)`  
         * __해결부__ :  문제를 해결하는 부분 (연산부분)`return n + recursiveSum(n-1);`  
-<!--점화식 : An = F(An-1) : n번째항을 나타낼 때 이전항을가지고 n번째항의 값을 구하는관계식-->
+
 
 * [1 ~ 7 까지의 숫자 카드가 있을 때 , 이것을 나열할 수 있는 경우의 수를 출력](0531_1.cpp)  
-* [SWEA모의기출 문제_수영장](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq) - [C++ 문제 풀이](1952.cpp)  
-* [BOJ_사다리조작]()  
+* [SWEA모의기출 문제_수영장](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpFQaAQMDFAUq)  ([C++ 문제 풀이](1952.cpp))  
+    * 점화식 짜는 법
+    * __점화식__ : An = F(An-1) : n번째항을 나타낼 때 이전항을가지고 n번째항의 값을 구하는관계식
+        > *ex) 2칸, 3칸을 오르면서 N칸까지가는 계단문제*  
+        >  F(N) = (F(n-2) + 2) + (F(n-3) + 3)  
+
+        <center>
+            <img src="nthStair.png"/>
+        </center>
+
+        > 마지막에 남는 케이스는 2계단이 남거나 3계단이 남는 두케이스밖에 없음  
+        > 수형도를 그릴 때 즉, 식을 유도할때는 가장 마지막 케이스를 고려하면 점화식을 세울 수 있음  
+        > __점화식을 세울 때 고려할 수 있는 가장 마지막 케이스를 먼저 고려해서 일반화하자__  
+
+
+    
+* [BOJ_사다리조작](https://www.acmicpc.net/problem/15684)  
 * [BOJ_테트로미노]()  
 * [SWEA모의기출 문제_디저트카페]()  
 * [SWEA모의기출 문제_보호필름]()  
