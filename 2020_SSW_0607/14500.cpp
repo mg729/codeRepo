@@ -6,7 +6,7 @@ using namespace std;
 
 int T, N, M;
 int input[501][501];
-int visit[501][501] = { 0, };
+int visit[501][501];
 int answer = 0;
 
 stack<pair<int,int>> s;
