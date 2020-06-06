@@ -55,9 +55,9 @@
 
 * [BOJ_사다리조작](https://www.acmicpc.net/problem/15684)  ([C++ 풀이](15684.cpp))  
 * [BOJ_테트로미노](https://www.acmicpc.net/problem/14500)  ([C++ 풀이](14500.cpp))  
-* [SWEA모의기출 문제_디저트카페]()  
-* [SWEA모의기출 문제_보호필름]()  
-* [BOJ_치킨배달]()  
+* [SWEA모의기출 문제_디저트카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu)  
+* [SWEA모의기출 문제_보호필름](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V1SYKAaUDFAWu)  
+* [BOJ_치킨배달](https://www.acmicpc.net/problem/15686)  
 
 ## 다차원 배열 응용 탐색 및 최적화
 > 2차원 배열 활용
@@ -110,22 +110,22 @@
     * N-Queen 문제는 백트래킹의 핵심예제  
     * _구글 PS문제 예제에 많이 출제되는 경향있음_  
 
-* [SWEA모의기출 문제_등산로조성]()  
-* [BOJ_연구소]()  
-* [SWEA모의기출 문제_홈 방법 서비스]()  
-* [BOJ_영역구하기]()  
+* [SWEA모의기출 문제_등산로조성](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq)  
+* [BOJ_연구소](https://www.acmicpc.net/problem/14502)  
+* [SWEA모의기출 문제_홈 방법 서비스](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu)  
+* [BOJ_영역구하기](https://www.acmicpc.net/problem/2583)  
 
 
 ## 자료구조 기반 시뮬레이션
 > 배열(리스트), 큐, 스택, 그래프 등에 기반한 시뮬레이션  
 
 
-* [BOJ_로봇청소기]()  
-* [SWEA모의기출 문제_점심시간]()  
+* [BOJ_로봇청소기](https://www.acmicpc.net/problem/14503)  
+* [SWEA모의기출 문제_점심시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5BEE6AK0DFAVl&)  
 
 ## 추천 핵심 문제
-* [SWEA모의기출 문제_활주로 건설]()  
-* [SWEA모의기출 문제_미생물 격리]()  
-* [BOJ_톱니바퀴]()  
-* [SWEA모의기출 문제_줄기세포배양]()  
-* [SWEA모의기출 문제_원자소멸시뮬레이션]()  
+* [SWEA모의기출 문제_활주로 건설](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH)  
+* [SWEA모의기출 문제_미생물 격리](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl)  
+* [BOJ_톱니바퀴](https://www.acmicpc.net/problem/14891)  
+* [SWEA모의기출 문제_줄기세포배양](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo)  
+* [SWEA모의기출 문제_원자소멸시뮬레이션](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRFInKex8DFAUo)  
