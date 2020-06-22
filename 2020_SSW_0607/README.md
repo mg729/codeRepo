@@ -75,7 +75,7 @@
         * 탐욕법을 사용하면 최적해를 구할 수 없음  
 
 
-* [SWEA모의기출 문제_벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) ([C++ 풀이]())  
+* [SWEA모의기출 문제_벌꿀채취](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) ([C++ 풀이](2115.cpp))  
 
 
 ## DFS, BFS
