@@ -2,6 +2,7 @@
 <!--문제를 풀때 최초의 설계가 제일 중요-->
 <!--설계에 확신을 갖고 코딩을해야함-->
 <!--시험장에서는 실제 실력의 50%밖에 발휘를 못함-->
+<!--언제나 문제 풀때 시간을 재고 실전처럼 문제를 풀어야함-->
 
 ## 알고리즘 성능 측정
 - 시간적 효율성을 우선시함  
@@ -110,8 +111,8 @@
     * N-Queen 문제는 백트래킹의 핵심예제  
     * _구글 PS문제 예제에 많이 출제되는 경향있음_  
 
-* [SWEA모의기출 문제_등산로조성](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq)  
-* [BOJ_연구소](https://www.acmicpc.net/problem/14502)  
+* [SWEA모의기출 문제_등산로조성](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq)([C++ 풀이](1949.cpp))  
+* [BOJ_연구소](https://www.acmicpc.net/problem/14502)([C++ 풀이](14502.cpp))  
 * [SWEA모의기출 문제_홈 방법 서비스](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu)  
 * [BOJ_영역구하기](https://www.acmicpc.net/problem/2583)  
 
