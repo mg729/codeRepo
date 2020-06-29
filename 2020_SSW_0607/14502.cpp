@@ -1,9 +1,20 @@
+/*
+실제 문제 출제와 난이도 비슷한 문제
+두시간을 잡아두고 문제 풀이진행
+바이러스가 퍼지는 모양이 BFS (상하좌우로 바이러스가 퍼지는 경우 BFS)
+- 바이러스가 존재하는 칸을 큐에 insert
+- 그 칸과 상하좌우 인접한 칸을 2로 바꾸면서 큐에 insert
+- 반복
+
+*/
+
 #include <cstdio>
 #include <algorithm>
 #include <queue>
 
 using namespace std;
 
+//상하 좌우를 위한 dx,dy
 int dx[] = { 0,0,-1,1 };
 int dy[] = { -1,1,0,0 };
 
@@ -14,7 +25,8 @@ int ans = 0;
 
 
 
-//지도 복사
+//지도 복사 
+// 두개의 map을 input으로 받아서 a에 복사하는 것
 void copyMap(int a[8][8], int b[8][8]) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
@@ -51,6 +63,7 @@ void BFSforVirus() {
 		}
 	}
 	//연구소에 오염되지 않은 부분 체크.
+	//2로바뀌지않고 0으로 남아있는부분 개수 체크
 	int cnt = 0;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
@@ -64,7 +77,7 @@ void BFSforVirus() {
 // 벽을 세우는 재귀 함수 
 void recursiveWall(int cnt) {
 	// 종료 부, 바이러스를 퍼트려서 오염되지 않은 부분의 갯수를 확인한다.
-	if (cnt == 3) {
+	if (cnt == 3) { //벽의 개수가 3일때 종료
 		BFSforVirus();
 		return;
 	}
@@ -73,7 +86,7 @@ void recursiveWall(int cnt) {
 		for (int j = 0; j < m; j++) {
 			if (tempMap[i][j] == 0) {
 				tempMap[i][j] = 1; // 해결 부, 실제로 벽을 세우는 부분
-				recursiveWall(cnt + 1); // 분할 부, cnt를 ++ 시켜 벽을 세워야하는 갯수를 -1 시키면서 문제를 분할.				
+				recursiveWall(cnt + 1); // 분할 부, cnt를 ++ 시켜 벽을 세워야하는 갯수를 -1 시키면서 문제를 분할. -> 재귀함수 호출		 		
 				tempMap[i][j] = 0;
 			}
 		}
@@ -91,7 +104,7 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			if (inputMap[i][j] == 0) {
-				copyMap(tempMap, inputMap);
+				copyMap(tempMap, inputMap); //input 데이터가 바뀌면안되니까 tempMap을 만들어놓음
 				tempMap[i][j] = 1;
 				recursiveWall(1);
 				tempMap[i][j] = 0;

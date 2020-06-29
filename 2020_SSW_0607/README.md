@@ -119,10 +119,11 @@
 
 ## 자료구조 기반 시뮬레이션
 > 배열(리스트), 큐, 스택, 그래프 등에 기반한 시뮬레이션  
+> 시간의 흐름에 따른 시뮬레이션   
 
 
-* [BOJ_로봇청소기](https://www.acmicpc.net/problem/14503)  
-* [SWEA모의기출 문제_점심시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5BEE6AK0DFAVl&)  
+* [BOJ_로봇청소기](https://www.acmicpc.net/problem/14503)([C++ 풀이](14503.cpp))   
+* [SWEA모의기출 문제_점심시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5BEE6AK0DFAVl&)([C++ 풀이](2383.cpp))    
 
 ## 추천 핵심 문제
 * [SWEA모의기출 문제_활주로 건설](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH)  
