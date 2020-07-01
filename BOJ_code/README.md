@@ -122,7 +122,7 @@
 
     * std::map is a __sorted__ associative container that contains key-value pairs with __unique keys.__   
         * map 정렬  
-        * `map <key, value>` : key를 default로 `std::less<key>`를 활용하여 오름차순으로 정렬    
+        * `map <key, value>` : __key를__ default로 `std::less<key>`를 활용하여 __오름차순으로 정렬__    
         * `map <key, value, std::greater<key>>` : 내림차순 정렬  
     * __iterator__ 활용한 for 루프 순회  
     ```c++
