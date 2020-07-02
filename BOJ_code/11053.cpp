@@ -32,3 +32,51 @@ int main()
 	
 	return 0;
 }
+
+/**
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> v;
+int maxLength[1001];
+
+int main()
+{
+	int n;
+	cin >> n;
+	if(n == 1)
+	{
+		cout << 1;
+		return 0;
+	}
+	
+	for(int i = 0; i < n; i++)
+	{
+		int val;
+		cin >> val;
+		v.push_back(val);
+	}
+	int count = 0;
+	int cmp = v[0];
+	for(int i = 0; i < n; i++)
+	{
+		if(cmp < v[i+1])
+		{
+			maxLength[i+1] = ++count;
+			cmp = v[i+1];
+		}
+	}
+	
+	int answer = 0;  //never be 0
+	for(int i = 1; i <= n; i++)
+	{
+		answer = answer > maxLength[i] ? answer : maxLength[i];
+	}
+	
+	cout << answer;
+	
+	return 0;
+}
+*/
