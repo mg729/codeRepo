@@ -2,7 +2,7 @@
 using namespace std;
 
 void insert(int idx, int num, int arr[], int& len){
-  for(int i = len+1; i >= idx; i--) {
+  for(int i = len+1; i >= idx; i--) { 
 	arr[i+1] = arr[i];
   }
   arr[idx] = num;
@@ -10,10 +10,11 @@ void insert(int idx, int num, int arr[], int& len){
 }
 
 void erase(int idx, int arr[], int& len){
+  len--; // decrease the value len before the for loop
   for(int i = idx; i  < len; i++) {
   	arr[i] = arr[i+1];
   }
-  len--;  
+//  len--;
 }
 
 void printArr(int arr[], int& len){
