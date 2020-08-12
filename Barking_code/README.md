@@ -1,9 +1,11 @@
 # Barking Dog Algorithm Study
 
-> Chapther
-[0x01 시간, 공간복잡도](0x01시간,공간복잡도)
-[0x02 기초코드 작성요령](0x02기초코드작성요령)
-[0x03 배열](0x03배열)
+> Chapther  
+
+
+[0x01 시간, 공간복잡도](#0x01시간,공간복잡도)   
+[0x02 기초코드 작성요령](#0x02기초코드작성요령)  
+[0x03 배열](#0x03배열)  
 
 
 ## 0x01시간,공간복잡도
@@ -23,7 +25,6 @@
 - **공간 복잡도** 
     - 입력의 크기와 문제를 해결하는데 필요한 공간의 상관관계
     - 512 MB = 1.2 억개의 int  
-    - 
 
 - **정수 자료형**  
     - char 자료형은 1byte = 8 bit  
@@ -164,3 +165,14 @@ int main() {
     - O(n)의 풀이를 생각해내는게 관건
     - for 루프하나만으로 문제풀이해야
     - 수를 차례로 하나씩 읽으면서 **이전에 등장한 수** 중에서 지금 보고 있는 수와 더해 100이 되는 수가 있는지를 체크  
+
+
+- 배열요소 채우기
+    - `fill` : fill(arr, arr+arraySize, 0);
+    - arr이름의 배열을 arrSize만큼 모두 0으로 초기화
+    - **fill(void fill (ForwardIterator first, ForwardIterator last, const T& val);)**  
+        - first : start point of iterator
+        - last : end point of iterator
+        - val : value to fill
+
+## 00x4연결리스트
