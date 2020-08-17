@@ -2,6 +2,7 @@
 using namespace std;
 
 list<int> L;
+vector<int> V;
 
 int main() {
 	ios::sync_with_stdio(0);
@@ -15,32 +16,21 @@ int main() {
 	
 	auto cursor = L.begin();
 	
-	for (int i = 0; i < k - 1; i++)
-		++cursor;
-	
-		
-	cout << "<";
-	
-	for(int i = 0; i < n-1; i++) {
-		
-		cout << *cursor << ", ";
-		
-		cursor = L.erase(cursor);
-		if(cursor == L.end())
-			cursor = L.begin();
-
-		for (int j = 0; j < k-1; j++) {
-			auto endCursor = cursor;
-			++endCursor;
-			if(endCursor != L.end())
-				++cursor;
-			else {
-				cursor = L.begin();
-			}
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j <k-1; j++) {
+			if(cursor == L.end()) cursor = L.begin();
+			cursor++;
+			if(cursor == L.end()) cursor = L.begin();
 		}
+		V.push_back(*cursor);
+		cursor = L.erase(cursor);
 	}
 	
-	cout << *cursor << ">";
+	cout << "<";
+	for(int i = 0; i < V.size() -1; i++)
+		cout << V[i] << ", ";
+	
+	cout << V[V.size()-1] << ">";
 	
 	return 0;
 }
