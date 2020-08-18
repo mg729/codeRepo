@@ -27,7 +27,7 @@ int main() {
 	}
 	
 	cout << "<";
-	for(int i = 0; i < V.size() -1; i++)
+	for(int i = 0; i < V.size() - 1; i++)
 		cout << V[i] << ", ";
 	
 	cout << V[V.size()-1] << ">";
