@@ -7,7 +7,18 @@
 [0x04 연결리스트](#0x04연결리스트)  
 [0x05 스택](#0x05스택)  
 [0x06 큐](#0x06큐)  
+[0x07 덱](#0x07덱)
 
+
+<details><summary>PS - should Memorize</summary>
+<p>
+
+### stack
+- [stack pair<index, height>- 레이저를 수신하는 하나의 탑](0x05/2493.cpp)
+- [stack size() - 옥상에서 볼 수 있는 모든 탑](0x05/6918.cpp)
+
+</p>
+</details>
 
 ## 0x01시간,공간복잡도
 - **시간 복잡도**  
@@ -29,14 +40,14 @@
 
 - **정수 자료형**  
     - char 자료형은 1byte = 8 bit  
-    - short (2 byte)   
-    - int (4 byte)  
-    - long long (8 byte)  
+    - short (2 byte) : 2^15 -1 (=32767)   
+    - **int** (4 byte) : 2^31 -1 **(= 2.1 * 10^9)**  
+    - **long long** (8 byte) : 2^63 -1 **(= 9.2*10^18)**  
     - Integer Overflow
 
 - 실수 자료형
-    - float (4byte)
-    - *double* (8byte)
+    - float (4byte) - 유효숫자6자리
+    - **double** (8byte) - 유효숫자15자리
     - (1) 실수의 저장/연산 과정에서 반드시 오차가 발생할 수 밖에 없다.
     - (2) double 에 long long long 범위의 정수를 함부로 담으면 안된다.
     - (3) 실수를 비교할 때는 등호를 사용하면 안된다.
@@ -286,4 +297,35 @@ int main() {
 ```
 
 ## 0x06큐
+- **큐**
+    - **FIFO(First In First Out)**
+    - 원소의 추가 O(1)
+    - 원소의 제거 O(1)
+    - 제일 앞/뒤의 원소 확인 O(1)
+    - 제일 앞/뒤가 아닌 나머지 원소들의 확인/변경이 원칙적으로 불가 (STL에서도 불가능)  
 
+    ```cpp
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main() {
+        queue<int> q;
+        q.push(10);
+        q.push(20);
+        q.push(30);
+
+        cout << q.size(); //3
+
+        if(q.empty())
+            cout <<"Queue is empty";
+        
+        q.pop(); // 20 30
+        q.front(); //20
+        q.back(); // 30
+
+    }
+    ```
+
+   - 보통 큐는 BFS랑 Flood Fill를 할 때 쓰게 되는데 둘 다 코딩테스트 단골 문제여서 문제를 풀 때 STL queue를 쓸 일이 아주 많을 것입니다. 
+
+## 0x07덱
