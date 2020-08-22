@@ -8,7 +8,7 @@
 [0x05 스택](#0x05스택)  
 [0x06 큐](#0x06큐)  
 [0x07 덱](#0x07덱)
-
+[0x08 스택의활용](#0x08스택의활용(수식의괄호쌍))
 
 <details><summary>PS - should Memorize</summary>
 <p>
@@ -329,3 +329,41 @@ int main() {
    - 보통 큐는 BFS랑 Flood Fill를 할 때 쓰게 되는데 둘 다 코딩테스트 단골 문제여서 문제를 풀 때 STL queue를 쓸 일이 아주 많을 것입니다. 
 
 ## 0x07덱
+- **deque**(Double Ended Queue)
+    - 양쪽 끝에서 삽입과 삭제가 전부 가능한 자료구조
+    - - 원소의 추가가 O(1)
+    - 원소의 제거가 O(1)
+    - 제일 상단의 원소 확인이 O(1)
+    - 제일 상단이 아닌 나머지 원소들의 확인/변경이 원칙적으로는 불가능
+        - **STL deque에서는 인덱스로 원소에 접근 가능** 
+        - STL stack, queue에서는 인덱스로 원소 접근 불가능
+
+- **STL dequeue**
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+deque<int> dq;
+
+int main() {
+    dq.push_front(10); //10
+    dq.push_back(50); //10 50
+    dq.push_front(24); //24 10 50
+
+    for(auto x : dq) {
+        cout << x;
+    }
+
+    cout << dq.size(); //3
+    dq[2] = 17; //24 10 17 50
+    dq.insert(dq.begin() + 1, 33); //24 33 10 17 50
+    dq.erase(dq.begin()+3); //24 33 10 50
+
+    dq.clear(); // dq.size == 0; 모든 원소 제거
+
+}
+```
+- STL vector에서 제공되는 기능을 STL deque에서도 다 제공해주고 심지어 deque은 front에서도 O(1)에 추가와 제거가 가능하니 deque이 vector보다 상위호환이 아닌가 하는 생각이 들 수 있겠지만, __vector와 달리 deque은 모든 원소들이 메모리 상에 연속하게 배치되어 있지 않습니다.__ 
+
+
+## 0x08스택의활용(수식의괄호쌍)
