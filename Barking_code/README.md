@@ -17,6 +17,12 @@
 - [stack pair<index, height>- 레이저를 수신하는 하나의 탑](0x05/2493.cpp)
 - [stack size() - 옥상에서 볼 수 있는 모든 탑](0x05/6918.cpp)
 
+### deque
+- [reverse data , string utilization](0x07/5430.cpp)
+    - R 명령이 들어온다고 진짜로 배열의 모든 원소를 뒤집으면 절대로 안 됩니다. N개의 원소의 순서를 정말로 바꾸면 당연히 그 원소 수만큼 시간이 걸리고, 그걸 최대 10만 번 수행해야 하니 테스트 케이스 1개만으로도 100억번의 연산이 수행됩니다.    
+        - **R 명령의 핵심은 실제로 원소를 뒤집지 않고도 뒤집힌 것과 같은 효과를 내도록 구현하는 것입니다.** --> deque 컨테이너와 isReverse flag 활용 
+    - 테스트 케이스마다 초기화가 잘 됐는지 확인하세요. 
+        - **every end of the test case, container sholud be cleared**
 </p>
 </details>
 
