@@ -17,7 +17,7 @@
 - [stack pair<index, height>- 레이저를 수신하는 하나의 탑](0x05/2493.cpp)
 - **size() 활용** 
     - [stack size() - 옥상에서 볼 수 있는 모든 탑](0x05/6918.cpp)  
-    - [레이저를 쏠 때 몇개의 막대가 잘녀나가는지는 그 순간의 stack의 size와 연관](0x08/10799.cpp)  
+    - [레이저를 쏠 때 몇개의 막대가 잘려나가는지는 그 순간의 stack의 size와 연관](0x08/10799.cpp)  
     
 ### deque
 - [reverse data , string utilization](0x07/5430.cpp)
