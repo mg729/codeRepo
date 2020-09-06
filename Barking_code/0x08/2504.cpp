@@ -1,10 +1,9 @@
 #include<bits/stdc++.h>
-//https://chocodrogba.tistory.com/9
+
 using namespace std;
 
 stack<char> str;
-stack<int> num;
-stack<int> tempN;
+int num[100];
 
 int main() {
 	ios::sync_with_stdio(false);
@@ -13,107 +12,69 @@ int main() {
 	string brt; //bracket
 	cin >> brt;
 	
-	int sum = 0;
-	int temp = 0;
-	for (int i = 0; brt[i]; i++) {
+	int pos = 0;
+	for (int i = 0; i < brt[i] ; i++) {
 		switch(brt[i]) {
-			case '(' : {	
+			case '(' : {
 				str.push(brt[i]);
+				pos++;
 				break;
 			}
 			case '[' : {
-				str.push(brt[i]);				
+				str.push(brt[i]);
+				pos++;
 				break;
 			}
 			case ')' : {
-				if(str.empty()){
-						cout << __LINE__ <<endl;
-					cout << "0";
-					return 0;
+				if(str.empty()) {
+					cout << "0"; return 0;
 				}
 				
-//				while(str.size() > 1) {
-					char tempC = str.top();
-					str.pop();
-					
-					if(i!=0 && brt[i-1] == '(') {
-						tempN.push(2);
-						temp = 0;
-					}
-					else if (tempC == '(') {
-						tempN.push(2*temp);
-					}
-					
-					if(temp == 0)
-						temp = tempN.top();
-					else {
-//						while(!tempN.empty()) {
-//							temp += tempN.top();
-//							tempN.pop();
-//						}
-						temp = tempN.top();
-					}
-//				}
-				cout << "# " << i << ": " << temp << endl;
-				num.push(temp);
+				if(str.top() != '(') {
+					cout << "0"; return 0;
+				}
+				pos--;
+				if(num[pos+1] > 0) {
+					num[pos] += num[pos+1] * 2;
+					num[pos+1] = 0;
+				}
+				else
+					num[pos] += 2;
 				
+				str.pop();
 				break;
 			}
-//			case ']' : {
-//				if(str.empty()){
-//					cout << "0";
-//					return 0;
-//				}
-//				
-//				if( i!=0 && brt[i-1] == '[' ) {
-//					num.push(3);
-//					str.pop();
-//				}
-//				else {
-//					while(str.top() != '[') {
-//						tempN.push(num.top());
-//						num.pop();
-//					}
-//					
-//					if(tempS.size() == 1) {
-//						num.push(tempN.top() * 3);
-//						tempN.pop();
-//					}
-//					else {
-//						int temp = 0;
-//						while(!tempN.empty()) {
-//							temp += tempN.top();
-//							tempN.pop();
-//						}
-//						num.push(temp * 3);						
-//					}
-//				}
-//				break;
-//			}
-			default: {
-				cout << __LINE__ <<endl;
-				cout << "0";
-				return 0;
+			case ']' : {
+				if(str.empty()) {
+					cout << "0"; return 0;
+				}
+				
+				if(str.top() != '[') {
+					cout << "0"; return 0;
+				}
+				pos--;	
+				if(num[pos+1] > 0) {
+					num[pos] += num[pos+1] * 3;
+					num[pos+1] = 0;
+				}
+				else
+					num[pos] += 3;
+				str.pop();				
 				break;
 			}
 			
+			default : {
+				cout << "0"; return 0;
+				break;
+			}
 		}
 	}
 	
 	if(!str.empty()) {
-		cout << __LINE__ <<endl;
-		cout << "0";
-		return 0;
+		cout << "0"; return 0;
 	}
-		
-	while (!num.empty()) {
-		int val = num.top();
-		sum += val;
-		num.pop();
-	}
-		cout << __LINE__ <<endl;
-	cout << sum;	
 	
+	cout << num[0];	
 	return 0;
 }
 
