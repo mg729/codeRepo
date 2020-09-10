@@ -9,6 +9,8 @@
 [0x06 큐](#0x06큐)  
 [0x07 덱](#0x07덱)  
 [0x08 스택의활용](#0x08스택의활용(수식의괄호쌍))  
+[0x09 BFS](#0x09BFS)  
+
 
 <details><summary>PS - should Memorize</summary>
 <p>
@@ -386,4 +388,89 @@ int main() {
         - 2-2) 스택의 top이 짝이 맞지 않는 괄호일 경우 올바르지 않은 괄호쌍
         - 2-3) 스택의 top이 짝이 맞는 괄호일 경우 pop
     3. 모든 과정을 끝낸 후 스택에 괄호가 남아있으면 올바르지 않은 괄호쌍, 남아 있지 않으면 올바른 괄호쌍
+
+## 0x09BFS
+> **BFS**  
+> BFS는 그래프라는 자료구조에서 모든 노드를 방문하기 위한 알고리즘  
+> *Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root , and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.*
+
+
+- *Flood Fill*
+    - Flood Fill  is an algorithm that determines the area connected to a given node in a multi-dimensional array.
+    - Flood fill is an algorithm mainly used to determine a bounded area connected to a given node in a multi-dimensional array.
+    - 다차원 배열의 어떤 칸과 연결된 영역을 찾는 알고리즘
+
+- BFS 정석 코드  
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define X first
+#define Y second // pair에서 first, second를 줄여서 쓰기 위해서 사용
+int board[502][502] =  {{1,1,1,0,1,0,0,0,0,0},
+                        {1,0,0,0,1,0,0,0,0,0},
+                        {1,1,1,0,1,0,0,0,0,0},
+                        {1,1,0,0,1,0,0,0,0,0},
+                        {0,1,0,0,0,0,0,0,0,0},
+                        {0,0,0,0,0,0,0,0,0,0},
+                        {0,0,0,0,0,0,0,0,0,0} }; // 1이 파란 칸, 0이 빨간 칸에 대응
+bool vis[502][502]; // 해당 칸을 방문했는지 여부를 저장
+int n = 7, m = 10; // n = 행의 수, m = 열의 수
+int dx[4] = {1,0,-1,0};
+int dy[4] = {0,1,0,-1}; // 상하좌우 네 방향을 의미
+int main(void){
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  queue<pair<int,int> > Q;
+  vis[0][0] = 1; // (0, 0)을 방문했다고 명시
+  Q.push({0,0}); // 큐에 시작점인 (0, 0)을 삽입.
+  while(!Q.empty()){
+    pair<int,int> cur = Q.front(); Q.pop();
+    cout << '(' << cur.X << ", " << cur.Y << ") -> ";
+    for(int dir = 0; dir < 4; dir++){ // 상하좌우 칸을 살펴볼 것이다.
+      int nx = cur.X + dx[dir];
+      int ny = cur.Y + dy[dir]; // nx, ny에 dir에서 정한 방향의 인접한 칸의 좌표가 들어감
+      if(nx < 0 || nx >= n || ny < 0 || ny >= m) continue; // 범위 밖일 경우 넘어감
+      if(vis[nx][ny] || board[nx][ny] != 1) continue; // 이미 방문한 칸이거나 파란 칸이 아닐 경우
+      vis[nx][ny] = 1; // (nx, ny)를 방문했다고 명시
+      Q.push({nx,ny});
+    }
+  }
+}
+```
+|  |  |   |    
+| :---: | :---: | :---: |    
+|  |  x-1, y |   |    
+| x, y-1 |  x, y | x, y+1  |    
+|  |  x+1, y |   |    
+
+1. 시작하는 칸을 큐에 넣고 방문했다는 표시를 남김  
+2. 큐에서 원소를 꺼내어 그 칸에 상하좌우로 인접한 칸에 대해 3번을 진행  
+3. 해당 칸을 이전에 방문했다면 아무것도 하지 않고, 처음으로 방문했다면 방문했다는 표시를 남기고 해당 칸을 큐에 삽입  
+4. 큐가 빌 때까지 2번을 반복  
+    - 모든 칸이 큐에 한 번 씩 들어가므로 시간복잡도는 칸이 N 개일때 **O(N)**
+    - 만약 행이 R개이고 열이 C개이면 **O(RC)**  
+
+    
+- STL : pair
+    - [cplusplus.com/utility/pair](http://www.cplusplus.com/reference/utility/pair/pair/)
+    - utility 헤더에 있는 pair
+    - make_pair로 값을 넣어줄 수도 있고, C++11 이상에서는 그냥 중괄호를 써서 값을 초기화
+    - 값의 접근은 각각 first, second를 부름으로서 가능하고 또 pair에는 미리 대소 관계가 설정되어 있음 
+    ```cpp
+    std::vector<std::pair<int, std::string>> v = { {2, "baz"},
+                                                {2, "bar"},
+                                                {1, "foo"} };
+    std::sort(v.begin(), v.end());
+
+    for(auto p: v) {
+        std::cout << "(" << p.first << "," << p.second << ")\n";
+    }
+    //Output
+    /*
+    (1,foo)
+    (2,bar)
+    (2,baz)
+    */
+    ```
+
 
