@@ -10,6 +10,7 @@
 [0x07 덱](#0x07덱)  
 [0x08 스택의활용](#0x08스택의활용(수식의괄호쌍))  
 [0x09 BFS](#0x09BFS)  
+[0x0A DFS](#0x0A_DFS)  
 
 
 <details><summary>PS - should Memorize</summary>
@@ -451,7 +452,7 @@ int main(void){
     - 만약 행이 R개이고 열이 C개이면 **O(RC)**  
 
     
-- STL : pair
+- *STL : pair*
     - [cplusplus.com/utility/pair](http://www.cplusplus.com/reference/utility/pair/pair/)
     - utility 헤더에 있는 pair
     - make_pair로 값을 넣어줄 수도 있고, C++11 이상에서는 그냥 중괄호를 써서 값을 초기화
@@ -472,5 +473,33 @@ int main(void){
     (2,baz)
     */
     ```
+- **다차원 배열에서 탐색이 필요한 문제는 전부 BFS로 풀이**  
+- **첫번째 vis[][] = 1 초기화 잊지말 것**
+
+- **입력값이 붙어있는지 체크**  
+    - 떨어져있으면 이중 for loop 으로  그냥 cin  
+
+        ```cpp
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m ; j++) {
+                cin >> board[i][j];
+            }
+        }
+        ```
+
+    - 붙어있으면 아래처럼 for loop 내부적으로 char 처리 따로해줌  
+
+        ```cpp
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m ; j++) {
+                char c;
+                cin >> c;
+                int val = c - '0';
+                board[i][j] = val;
+            }
+        }
+        ``` 
 
 
+
+## 0x0A_DFS
