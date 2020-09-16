@@ -36,4 +36,6 @@
     - cur.y
     ```cpp
     dist[nx][ny] = dist[cur.x][cur.y] + 1;
-    ```
+    ```  
+- *std::fill*
+`std::fill(v.begin(), v.end(), -1);`
