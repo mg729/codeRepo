@@ -48,8 +48,8 @@ int main() {
 			int ny = cur.y + dy[dir];
 			
 			if(nx < 0 || nx >= n || ny < 0 || ny >=m) continue;
-			if(dist[nx][ny] >=0 || board[nx][ny] != '1' ) continue;  // ***board  is string type but can accessed by 2 dimension char type 
-			dist[nx][ny] = dist[cur.x][cur.y] + 1;
+			if(dist[nx][ny] >=0 || board[nx][ny] != '1' ) continue;  // *** board  is string type but can be accessed by 2 dimension char type 
+			dist[nx][ny] = dist[cur.x][cur.y] + 1; // *** cur.x and cur.y is the way of accessing the prior queue data
 			
 			q.push({nx,ny});
 		}
