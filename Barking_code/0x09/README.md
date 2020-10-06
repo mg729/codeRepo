@@ -5,10 +5,14 @@
 > - 입력값이 붙어져있는지 떨어져있는지 체크    
 
 
+> **each move one square per minute, vertically or horizontally (not diagonally).**  
+> 매 분마다 한칸씩 수평또는 수직으로(비스듬하게 이동하지 않는다)  이동  `diagonal - 사선의, 대각선의`
+
+
 ## 1926 그림  
 
 [BOJ 1926](1926.cpp)  
- 
+
 
 ## 2178 미로탐색
 [BOJ 2178](2178.cpp)
@@ -39,6 +43,18 @@
     ```  
 - *std::fill*  
     - `std::fill(v.begin(), v.end(), -1);`
+
+- 띄어쓰기가 없는 입력 데이터
+    ```cpp
+    string board[102];
+    cin >> n >> m;
+    for(int i = 0; i < n; i++)
+        cin >> board[i];
+    for(int i = 0; i < n; i++)
+        fill(dist[i], dist[i]+m, -1);
+        
+    if(board[nx][ny] != '1' ) continue;// *** board  is string type but can be accessed by 2 dimension char type 
+    ```
 
 ## 7576 토마토
 [BOJ 7576](7576.cpp)  
