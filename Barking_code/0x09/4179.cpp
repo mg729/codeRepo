@@ -7,7 +7,7 @@ using namespace std;
 
 string board[1002];
 
-int fire[1002][1002]; //불에대한 전파속도 BFS  큐
+int fire[1002][1002];
 int steps[1002][1002]; 
 int dx[4] = {1, 0, -1, 0};
 int dy[4] = {0, 1, 0, -1};
@@ -32,13 +32,18 @@ int main() {
 	
 	for(int i = 0; i < r; i++) {
 		for(int j = 0; j < c; j++) {
-			if(board[i][j] == 'F')  // string board one dimension can be accessed two dimension char[][] type
+			if(board[i][j] == 'F') { // string board one dimension can be accessed two dimension char[][] type
 				q_fire.push({i,j});
-			else if(board[i][j] == 'J')
+				fire[i][j] = 0;
+			}
+			else if(board[i][j] == 'J') {
 				q_steps.push({i,j});
+				steps[i][j] = 0;
+			}
 		}
 	}
 	
+	// BFS - fire
 	while(!q_fire.empty()) {
 		pair<int, int> cur = q_fire.front();
 		q_fire.pop();
@@ -55,30 +60,28 @@ int main() {
 		}
 	}
 	
-	int res = 0;
+	// BFS - move steps
 	while(!q_steps.empty()) {
-		pair<int, int> cur = q_steps.front();
+		auto cur = q_steps.front();
 		q_steps.pop();
 		
 		for(int dir = 0; dir < 4; dir++) {
 			int nx = cur.x + dx[dir];
 			int ny = cur.y + dy[dir];
 
-			if(nx < 0 || nx >= r || ny < 0 || ny >= c) continue;  // ** >= r , >= c  do not forget equal condition
+			if(nx < 0 || nx >= r || ny < 0 || ny >= c) { // if out of range -> succeded to escape
+				cout << steps[cur.x][cur.y] + 1;
+				return 0;
+			}
 			if(board[nx][ny] == '#' || steps[nx][ny] >= 0 ) continue;
-			
+//			if(steps[nx][ny] >= fire[nx][ny] && fire[nx][ny] != -1) continue;  ***!!! 
+			if(steps[cur.x][cur.y] + 1 >= fire[nx][ny] && fire[nx][ny] != -1) continue;
 			steps[nx][ny] = steps[cur.x][cur.y] + 1;
-			
-			if(steps[nx][ny] >= fire[nx][ny]) res++;
-			
 			q_steps.push({nx,ny});
 		}
 	}
-	if(res == 0) {
-		cout << "IMPOSSIBLE";
-		return 0;
-	}
-	cout << res;
-	
+
+	cout << "IMPOSSIBLE";
+
 	return 0;
 }
