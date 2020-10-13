@@ -511,7 +511,7 @@ int main(void){
     3. 해당 칸을 이전에 방문했다면 아무것도 하지 않고, 처음으로 방문했다면 방문했다는 표시를 남기고 해당 칸을 스택에 삽입
     4. 스택이 빌 때 까지 2번을 반복  
 - DFS 코드  
-    ````cpp 
+    ```cpp 
     #include <bits/stdc++.h>
     using namespace std;
     #define X first
