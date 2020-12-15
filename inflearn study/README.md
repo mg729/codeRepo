@@ -7,8 +7,10 @@
 [001 max, min 값 초기화](#max,min_Initialization)  
 [002 ASCII](#Necessary_ascii_code)  
 [003 string Type](#stringType)  
-[004 how to convert string to int](#Convert_String_To_Int)
-[004 getline()](#When_To_Use_getline)
+[004 how to convert string to int](#Convert_String_To_Int)  
+[005 getline()](#When_To_Use_getline)  
+[006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
+
 
 ## max,min_Initialization
 `signed int` type: 값의 범위 `–2,147,483,648 ~ 2,147,483,647`  
@@ -62,3 +64,12 @@ for(int i = 0; i < input.length(); i++) {
 std::string name1;
 std::getline(std::cin, name1);
 ```
+
+
+## Example_of_TIME_LIMIT_EXCEED
+> quiz 9
+
+
+- __cin__ 말고 __scanf__ 쓰니까 시간 초과 문제 해결
+    - `ios::sync_with_stdio(false);`
+    - `cin.tie(nullptr);`
