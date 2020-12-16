@@ -73,3 +73,28 @@ std::getline(std::cin, name1);
 - __cin__ 말고 __scanf__ 쓰니까 시간 초과 문제 해결
     - `ios::sync_with_stdio(false);`
     - `cin.tie(nullptr);`
+
+- n제곱 시간복잡도 주의 (이중 for문)
+    - timeout
+    
+    ```cpp
+	for(int i = 1; i <= n; i++) {
+		int divisor = 0;
+		for(int j =1; j <= i; j++) {
+			if(i % j == 0)
+				divisor++;
+		}
+		cout << divisor <<" ";
+	}
+    ```
+
+
+    - fix timeout
+
+    ```cpp
+ 	for(int i = 1; i <= n; i++) {
+		for(int j = i; j <= n; j = j + i) {
+			v[j]++;
+		}
+	}   
+    ```
