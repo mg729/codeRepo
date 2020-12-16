@@ -26,6 +26,7 @@ int main(int argc, char** argv) {
 		number.push_back(val);
 	}
 	
+    // correct Code보면 내 코드의 문제점은 line 30, 36,40 for 반복문이 모두 같은 범위를 돌고있는데 개별적으로 도는게 문제
 	for (int i = 0; i < n ; i++) {
 		sumVal = digit_sum(number[i]);
 		v.push_back({number[i],sumVal});
