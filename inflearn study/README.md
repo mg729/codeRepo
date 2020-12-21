@@ -10,6 +10,7 @@
 [004 how to convert string to int](#Convert_String_To_Int)  
 [005 getline()](#When_To_Use_getline)  
 [006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
+[007 소수](#Prime_Number)  
 
 
 ## max,min_Initialization
@@ -18,7 +19,7 @@
 - min 값 초기화 : __2,147,000,000__  
 
 ## Necessary_ascii_code
-> quiz 6  
+> quiz 6, quiz 13   
 
 
 | ascii | 10진법 |   
@@ -98,3 +99,21 @@ std::getline(std::cin, name1);
 		}
 	}   
     ```
+
+## Prime_Number
+> quiz14, quiz15   
+
+
+- **1 is not prime Number**  
+- Need to consider TIME_OUT 
+    - range of checking prime number should be filtered by sqrt();
+
+    ```cpp
+    int limit = sqrt(x);  
+	for(int i = 2; i <= limit ; i++) {
+		if(x % i == 0) {
+			return false;
+		}
+	}
+    ```
+
