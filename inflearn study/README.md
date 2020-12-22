@@ -106,7 +106,17 @@ std::getline(std::cin, name1);
 
 - **1 is not prime Number**  
 - Need to consider TIME_OUT 
-    - range of checking prime number should be filtered by sqrt();
+    - 36의 약수  
+
+        | | |   
+        | :---: | :---: |    
+        | 1 | 36 |    
+        | 2 | 18 |    
+        | 3 | 12 |    
+        | 4 | 9 |    
+        | 6 | 6 |    
+
+    - range of checking prime number should be filtered by **sqrt()**;
 
     ```cpp
     int limit = sqrt(x);  
@@ -116,4 +126,16 @@ std::getline(std::cin, name1);
 		}
 	}
     ```
+
+
+    ```cpp 
+	for(int i = 2; i *i <= n ; i++) {
+		if(x % i == 0) {
+			return false;
+		}
+	}
+    ```
+
+## 
+
 
