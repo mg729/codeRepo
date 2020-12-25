@@ -11,6 +11,7 @@
 [005 getline()](#When_To_Use_getline)  
 [006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
 [007 소수](#Prime_Number)  
+[008 최대 최소값 구하기](#Max_Min_Value)  
 
 
 ## max,min_Initialization
@@ -136,6 +137,13 @@ std::getline(std::cin, name1);
 	}
     ```
 
-## 
+## Max_Min_Value
+> quiz19
 
+
+- 56 46 55 76 65 53 52 53 55 50
+- 위 수에서 맨 앞의 숫자를 max로 하고 맨앞자리 수를 제외한 부분집합의 수 중에서 값들을 비교해서 기존의 max값보다 크지않다면 가장 키가 큰 학생이므로 res++;
+- 근데 위 풀이 처럼하면 for 이중으로 쓰게됨
+- 그냥 **뒤에서부터** 접근
+- 뒤에서부터 맨 처음 숫자를 max로 설정하고 하나씩 앞으로 이동하면서 기존 max보다 큰 수가 있다면 키가 더 큰 학생이므로 res++; 하고 max값을 업데이트
 
