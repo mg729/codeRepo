@@ -12,6 +12,7 @@
 [006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
 [007 소수](#Prime_Number)  
 [008 최대 최소값 구하기](#Max_Min_Value)  
+[009 1차원 배열 구간합](#Partial_sum_of_Array)  
 
 
 ## max,min_Initialization
@@ -147,3 +148,10 @@ std::getline(std::cin, name1);
     - 그냥 **뒤에서부터** 접근
     - 뒤에서부터 맨 처음 숫자를 max로 설정하고 하나씩 앞으로 이동하면서 기존 max보다 큰 수가 있다면 키가 더 큰 학생이므로 res++; 하고 max값을 업데이트
 
+
+## Partial_sum_of_Array  
+> quiz22  
+> 1차원 배열 구간합 (**제한시간 1초**)  
+
+
+- 
