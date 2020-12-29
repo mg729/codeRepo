@@ -13,6 +13,8 @@
 [007 소수](#Prime_Number)  
 [008 최대 최소값 구하기](#Max_Min_Value)  
 [009 1차원 배열 구간합](#Partial_sum_of_Array)  
+[010 vector n개만큼 할당하기](#Vector_n)  
+
 
 
 ## max,min_Initialization
@@ -70,7 +72,8 @@ std::getline(std::cin, name1);
 
 
 ## Example_of_TIME_LIMIT_EXCEED
-> quiz 9
+> quiz 9 - nested for loop
+> quiz 22 (1) - access index which is out of scope of the array 
 
 
 - __cin__ 말고 __scanf__ 쓰니까 시간 초과 문제 해결
@@ -158,3 +161,16 @@ std::getline(std::cin, name1);
     - 0부터 k까지의 부분합을 미리 구하기
     - k부터 n-1까지 부분합 for루프하나로 구하기
         - 이때 배열의 요소를 sum 값에 더해주면서 i-k값인 k구간의 이전요소를 빼주면서 sum 값 업데이트
+
+
+## Vector_n
+> quiz24
+
+
+```cpp
+int n;
+cin >> n;
+vector<int> v(n);
+```
+
+
