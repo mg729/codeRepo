@@ -2,6 +2,8 @@
 
 <!--it 취업을 위한 알고리즘 문제 풀이-->
 - 2020.12.11~
+- 다시 풀어볼 문제
+    - quiz26 (병합정렬)
 
 > Quiz    
 [001 max, min 값 초기화](#max,min_Initialization)  
@@ -11,7 +13,7 @@
 [005 getline()](#When_To_Use_getline)  
 [006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
 [007 소수](#Prime_Number)  
-[008 소인수분해](#Prime_factorial)
+[008 소인수분해](#Prime_factorial)  
 [009 최대 최소값 구하기](#Max_Min_Value)  
 [010 1차원 배열 구간합](#Partial_sum_of_Array)  
 [011 vector n개만큼 할당하기](#Vector_n)  
