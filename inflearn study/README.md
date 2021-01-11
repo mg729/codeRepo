@@ -11,9 +11,10 @@
 [005 getline()](#When_To_Use_getline)  
 [006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
 [007 소수](#Prime_Number)  
-[008 최대 최소값 구하기](#Max_Min_Value)  
-[009 1차원 배열 구간합](#Partial_sum_of_Array)  
-[010 vector n개만큼 할당하기](#Vector_n)  
+[008 소인수분해](#Prime_factorial)
+[009 최대 최소값 구하기](#Max_Min_Value)  
+[010 1차원 배열 구간합](#Partial_sum_of_Array)  
+[011 vector n개만큼 할당하기](#Vector_n)  
 
 
 
@@ -72,7 +73,7 @@ std::getline(std::cin, name1);
 
 
 ## Example_of_TIME_LIMIT_EXCEED
-> quiz 9 - nested for loop
+> quiz 9 - nested for loop  
 > quiz 22 (1) - access index which is out of scope of the array 
 
 
@@ -139,6 +140,33 @@ std::getline(std::cin, name1);
 			return false;
 		}
 	}
+    ```
+
+## Prime_factorial
+> quiz27
+
+
+- factorial 
+    - N! 
+    - int 범위 초과할 수 있으니 N! 값을 저장할때는 unsigned long long
+- **prime factorial**
+    - 소인수분해
+    - **prime factorization, integer factorization**
+
+
+    ```cpp
+    int tmp = i;
+    int j = 2;
+    while(1) {
+        if(tmp % j == 0) {
+            tmp /= j;
+            v[j]++;
+        }
+        else {
+            j++;
+        }
+        if(tmp == 1) break;
+    }
     ```
 
 ## Max_Min_Value

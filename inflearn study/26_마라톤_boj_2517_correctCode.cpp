@@ -53,3 +53,8 @@ int main(){
 	}
 	return 0;
 }
+
+/*
+[병합정렬 실전 알고리즘 강좌] - https://www.youtube.com/watch?v=ctkuGoJPmAE
+[병합정렬 알고리즘] - https://blog.naver.com/ndb796/221227934987
+*/
