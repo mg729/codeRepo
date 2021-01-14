@@ -3,20 +3,21 @@
 <!--it 취업을 위한 알고리즘 문제 풀이-->
 - 2020.12.11~
 - 다시 풀어볼 문제
-    - quiz26 (병합정렬)
+    - quiz26 (병합정렬), quiz30 
 
 > Quiz    
 [001 max, min 값 초기화](#max,min_Initialization)  
 [002 ASCII](#Necessary_ascii_code)  
 [003 string Type](#stringType)  
 [004 how to convert string to int](#Convert_String_To_Int)  
-[005 getline()](#When_To_Use_getline)  
-[006 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
-[007 소수](#Prime_Number)  
-[008 소인수분해](#Prime_factorial)  
-[009 최대 최소값 구하기](#Max_Min_Value)  
-[010 1차원 배열 구간합](#Partial_sum_of_Array)  
-[011 vector n개만큼 할당하기](#Vector_n)  
+[005 how to convert int to string](#Convert_Int_To_String)  
+[006 getline()](#When_To_Use_getline)  
+[007 TIME_LIMIT_EXCEED](#Example_of_TIME_LIMIT_EXCEED)  
+[008 소수](#Prime_Number)  
+[009 소인수분해](#Prime_factorial)  
+[010 최대 최소값 구하기](#Max_Min_Value)  
+[011 1차원 배열 구간합](#Partial_sum_of_Array)  
+[012 vector n개만큼 할당하기](#Vector_n)  
 
 
 
@@ -61,6 +62,28 @@ for(int i = 0; i < input.length(); i++) {
     }
 }
 ```
+
+- stoi()
+- stof()
+- stod()
+```cpp
+string str1 = "45";
+int myint1 = std::stoi(str1);
+```
+
+
+## Convert_Int_To_String
+> quiz29
+
+- __to_string()__ 
+```cpp
+double f = 23.43;
+string f_str = std::to_string(f);
+
+int i = 24;
+string i_str = std::to_string(i);
+```
+
 
 ## When_To_Use_getline
 > quiz 7
