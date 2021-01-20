@@ -18,6 +18,8 @@
 [010 최대 최소값 구하기](#Max_Min_Value)  
 [011 1차원 배열 구간합](#Partial_sum_of_Array)  
 [012 vector n개만큼 할당하기](#Vector_n)  
+[013 C++ STL - 정렬되는 컨테이너](#STL_Container)  
+[014 C++ iterator 활용하기](#Iterator)  
 
 
 
@@ -227,3 +229,18 @@ vector<int> v(n);
 ```
 
 
+## STL_Container
+- 컨테이너에 원소가 삽입될때 자동으로 순차적으로 정렬되는 컨테이너
+    - `std::set`, `std::multiset`, `std::map`, and `std::multimap` are all **sorted using std::less** as the default comparison operation. 
+
+## Iterator
+- How to access data using iterator
+    - `*it`
+
+```cpp
+set<int>:: iterator it;
+for( it = s.begin(); it!=s.end(); ++it){
+   int ans = *it;
+  cout << ans << endl;
+}
+```
