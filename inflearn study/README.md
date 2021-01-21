@@ -3,7 +3,7 @@
 <!--it 취업을 위한 알고리즘 문제 풀이-->
 - 2020.12.11~
 - 다시 풀어볼 문제
-    - quiz26 (병합정렬), quiz30 
+    - quiz26 (병합정렬), quiz30, quiz35 
 
 > Quiz    
 [001 max, min 값 초기화](#max,min_Initialization)  
@@ -20,6 +20,7 @@
 [012 vector n개만큼 할당하기](#Vector_n)  
 [013 C++ STL - 정렬되는 컨테이너](#STL_Container)  
 [014 C++ iterator 활용하기](#Iterator)  
+[015 정렬 시간복잡도](#TimeComplexity_Sorting)  
 
 
 
@@ -244,3 +245,8 @@ for( it = s.begin(); it!=s.end(); ++it){
   cout << ans << endl;
 }
 ```
+
+## TimeComplexity_Sorting
+- 선택정렬, 버블정렬, 삽입정렬 : O(n^2)  
+- 병합정렬 : O(nLogn)
+- 퀵정렬 : O(nLogn), O(n^2)  
