@@ -5,6 +5,7 @@
 - 다시 풀어볼 문제
     - quiz26 (병합정렬), quiz30, quiz35 
     - quiz 36 삽입정렬 : 기업 손 코딩 문제 _강의 참고_
+    - quiz 37
 
 > Quiz    
 [001 max, min 값 초기화](#max,min_Initialization)  

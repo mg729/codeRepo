@@ -2,48 +2,45 @@
 using namespace std;
 
 int s, n;
-vector<int> v;
-int arr[101];
+int cache[1001];
 
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	freopen("input.txt", "rt", stdin);
+//	freopen("input.txt", "rt", stdin);
 	cin >> s >> n;
 	
-	int sRound = 0;	
 	for(int i = 0; i < n; i++) {
-		sRound++;
 		int val;
 		cin >> val;
-		if(sRound == s && arr[val] == 0 && !v.empty()) {
-			sRound = 0;
-			v.erase(v.begin());	
-			v.push_back(val);
-			arr[val]++;
-			continue;
+		int pos = -1;
+		for(int j = 0; j < s; j++) {
+			if(cache[j] == val) {
+				pos = j;
+				break;
+			}
 		}
 		
-		if(arr[val] == 0) {
-			v.push_back(val);
-		}
-		else {
-			auto it = v.begin();
-			for(int j = 0; j < v.size(); j++){
-				if(v[j] == val){
-					v.erase(it);
-					break;
-				}
-				it++;
+		if(pos >= 0) { //pos is the index of the same data --> insert pos data at the front
+			int tmp = cache[pos];
+			for(int j = pos-1 ; j >= 0; j--) {
+				cache[j+1] = cache[j];
 			}
-			v.push_back(val);
+			cache[0] = tmp;
 		}
-		arr[val]++;
+		else { //have not found same data --> insert new data at the front
+			for(int j = s ; j >= 0; j--) {
+				cache[j+1] = cache[j];
+			}
+			cache[0] = val;
+		}
 	}
-	
-	for(int i = v.size()-1; i > -1; i--) {
-		cout << v[i] <<" ";
+	for(int i = 0; i < s; i++) {
+		cout << cache[i] << " ";
 	}
 
+
+	
+	
 	return 0;
 }
