@@ -1,11 +1,17 @@
 # Inflearn
 
 <!--it 취업을 위한 알고리즘 문제 풀이-->
-- 2020.12.11~
-- 다시 풀어볼 문제
-    - quiz26 (병합정렬), quiz30, quiz35 
-    - quiz 36 삽입정렬 : 기업 손 코딩 문제 _강의 참고_
-    - quiz 37
+
+<details><summary>다시 풀어볼 문제</summary>
+<p>
+- 2020.12.11~ <br>
+    - quiz26 (병합정렬), quiz30, quiz35 <br>
+    - quiz 36 삽입정렬 : 기업 손 코딩 문제 (강의 참고)<br>
+    - quiz 37<br>
+    - quiz40 : MS_interview<br>
+</p>
+</details>
+
 
 > Quiz    
 [001 max, min 값 초기화](#max,min_Initialization)  
