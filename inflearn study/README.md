@@ -30,6 +30,7 @@
 [013 C++ STL - 정렬되는 컨테이너](#STL_Container)  
 [014 C++ iterator 활용하기](#Iterator)  
 [015 정렬 시간복잡도](#TimeComplexity_Sorting)  
+[016 이분탐색](#Binary_Search)  
 
 
 
@@ -259,3 +260,7 @@ for( it = s.begin(); it!=s.end(); ++it){
 - 선택정렬, 버블정렬, 삽입정렬 : O(n^2)  
 - 병합정렬 : O(nLogn)
 - 퀵정렬 : O(nLogn), O(n^2)  
+
+## Binary_Search
+- **lt, rt, mid**
+- quiz 42
