@@ -11,7 +11,7 @@ int main(){
 	}
 	sort(a.begin(), a.end());
 	rt=n-1;
-	while(lt<=rt){
+	while(lt<=rt){ //lt < rt го╦И error !!  
 		mid=(lt+rt)/2;
 		if(a[mid]==key){
 			printf("%d\n", mid+1);

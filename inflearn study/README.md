@@ -10,7 +10,7 @@
     - quiz 37<br>
     - quiz40 : MS_interview<br>
     - quiz41 : 연속된 숫자 합 구하기 - 수리 센스<br>
-    - quiz43 : 뮤직비디오 - 접근자체를 잘못했었음 - 결정알고리즘<br>
+    - quiz43,44 : 접근자체를 잘못했었음 - 결정알고리즘<br>
 </p>
 </details>
 

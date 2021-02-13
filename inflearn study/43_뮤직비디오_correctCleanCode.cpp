@@ -32,7 +32,7 @@ int main() {
 		if(v[i] > max) max = v[i];
 	}
 	
-	while(lt < rt) {
+	while(lt <= rt) { // lt < rt 하면 예외케이스 있음
 		mid = (lt + rt) / 2;
 		if(mid >= max && count(mid) <= m) { // mid should at least larger than input data
 			res = mid;
