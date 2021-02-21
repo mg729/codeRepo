@@ -233,14 +233,21 @@ std::getline(std::cin, name1);
 
 
 ## Vector_n
-> quiz24
+> quiz24, quiz47
 
 
 ```cpp
 int n;
 cin >> n;
 vector<int> v(n);
+
+// two dimension vector initialization
+vector<vector<int> > map(n, vector<int>(n, 0));
 ```
+- 2차원 벡터를 0으로 초기화
+- vector<vector<int> > map(n, vector<int>(n));
+- vector<vector<int> > map(n, vector<int>(n, **0**));
+    - 0은 생략가능 / 다른 수로 초기하할 경우 다른 자연수 입력
 
 
 ## STL_Container
