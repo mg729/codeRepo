@@ -34,6 +34,7 @@
 [014 C++ iterator 활용하기](#Iterator)  
 [015 정렬 시간복잡도](#TimeComplexity_Sorting)  
 [016 이분탐색](#Binary_Search)  
+[017 소수점 첫째자리에서 반올림](#Round_up_to_first_decimal_place)  
 
 
 
@@ -278,3 +279,18 @@ for( it = s.begin(); it!=s.end(); ++it){
 > **결정 알고리즘**  
 > 알고리즘 대회의 문제에서 결정알고리즘 유형이 출제되면 이분탐색법으로 해결  
 > **답을 결정해두고 이 답이 가능한지 아닌지를 따지며 답을 찾아가는 것**
+
+## Round_up_to_first_decimal_place
+> quiz 48
+
+
+- 소수점 첫째자리에서 반올림 : round up to first decimal place
+- 소수점 셋째자리에서 반올림 : round up to third decimal places
+- 소수점 : **decimal point**
+
+```c++
+int avg = (sum / 9.0) + 0.5;
+```
+- double 타입의 실수변수값에 0.5를 더해줘서 int 타입으로 강제형변환하면 첫째자리에서 반올림됨  
+
+
