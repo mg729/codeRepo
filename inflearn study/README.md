@@ -13,6 +13,7 @@
     - quiz43,44 : 접근자체를 잘못했었음 - 결정알고리즘<br>
     - quiz 45 : 원형데이터를 관리하는 최적의 컨테이너 // 아니고 시뮬레이션 문제<br>
     - quiz 51 : Dynamic Programming<br>
+    - quiz 52 : 투포인트 알고리즘<br>
     <!--55번까지 문제풀이하고 위의문제들 다시 풀어보고 56번으로 넘어가기-->
 </p>
 </details>
@@ -37,7 +38,7 @@
 [016 이분탐색](#Binary_Search)  
 [017 소수점 첫째자리에서 반올림](#Round_up_to_first_decimal_place)  
 [018 배열 index 설정](#How_to_handle_array_index)  
-
+[019 투포인트 알고리즘](#Two_Point_algorithm)  
 
 
 ## max,min_Initialization
@@ -310,4 +311,12 @@ for(int i = 0; i < n; i++) {
     }
 }
 ```
+
+
+## Two_Point_algorithm
+> quiz52  
+> **미국기업에서도 인터뷰로 자주나오는 유형**
+
+
+- 투포인트 알고리즘
 
