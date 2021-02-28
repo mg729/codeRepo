@@ -12,6 +12,7 @@
     - quiz41 : 연속된 숫자 합 구하기 - 수리 센스<br>
     - quiz43,44 : 접근자체를 잘못했었음 - 결정알고리즘<br>
     - quiz 45 : 원형데이터를 관리하는 최적의 컨테이너 // 아니고 시뮬레이션 문제<br>
+    - quiz 51 : Dynamic Programming<br>
     <!--55번까지 문제풀이하고 위의문제들 다시 풀어보고 56번으로 넘어가기-->
 </p>
 </details>
@@ -35,6 +36,7 @@
 [015 정렬 시간복잡도](#TimeComplexity_Sorting)  
 [016 이분탐색](#Binary_Search)  
 [017 소수점 첫째자리에서 반올림](#Round_up_to_first_decimal_place)  
+[018 배열 index 설정](#How_to_handle_array_index)  
 
 
 
@@ -293,4 +295,19 @@ int avg = (sum / 9.0) + 0.5;
 ```
 - double 타입의 실수변수값에 0.5를 더해줘서 int 타입으로 강제형변환하면 첫째자리에서 반올림됨  
 
+
+## How_to_handle_array_index
+> quiz 51
+
+
+- 이중 for문을 돌 때 `int i` 와 `int j` 값의 초기값을 1로 설정하는 것 권장
+- array 배열은 어차피 0으로 초기화 된 경우라면 아래 코드에서 board[i-1][j-1] 에서 i 와 j 가 1인 경우 0값이 있으므로 이슈상황 발생 안할 것
+
+```c++
+for(int i = 0; i < n; i++) {
+    for(int j = 0; j < m ; j++) {
+        board[i][j] = board[i][j-1] + board[i-1][j] - board[i-1][j-1] + arr[i][j]; 
+    }
+}
+```
 
