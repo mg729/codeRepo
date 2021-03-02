@@ -14,6 +14,7 @@
     - quiz 45 : 원형데이터를 관리하는 최적의 컨테이너 // 아니고 시뮬레이션 문제<br>
     - quiz 51 : Dynamic Programming<br>
     - quiz 52 : 투포인트 알고리즘<br>
+    - quiz 53 : 16진수 변환 처리<br>
     <!--55번까지 문제풀이하고 위의문제들 다시 풀어보고 56번으로 넘어가기-->
 </p>
 </details>
@@ -39,6 +40,7 @@
 [017 소수점 첫째자리에서 반올림](#Round_up_to_first_decimal_place)  
 [018 배열 index 설정](#How_to_handle_array_index)  
 [019 투포인트 알고리즘](#Two_Point_algorithm)  
+[020 K진수 변환](#Decimal_converter)
 
 
 ## max,min_Initialization
@@ -319,4 +321,15 @@ for(int i = 0; i < n; i++) {
 
 
 - 투포인트 알고리즘
+
+## Decimal_converter
+> quiz53  
+
+
+- 2진수 : Binary
+- 8진수 : Octal
+- 10진수 : decimal 
+- 16진수 : hexadecimal
+    - 16진수 (10 : A, 11: B, 12:C, 13:D, 14:E, 15:F)
+
 
