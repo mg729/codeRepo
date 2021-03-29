@@ -22,26 +22,24 @@ int main() {
 	
 //	freopen("input.txt", "rt", stdin);
 	cin >> n >> m;
-	
-	res = -1;
+	int minRes = -1;
 	for(int i = 0; i < n; i++) {
 		cin >> val;
 		v.push_back(val);
 		rt += val;
-		res = max(val, res);
+		minRes = max(val, minRes);
 	}
 	
-	int minRes = res;
 	lt = 1;
-	while(lt < rt) {	
+	while(lt <= rt) {	
 		mid = (lt+rt) / 2; // mid value will be set as minimum dvd size
-		if(calculateSize(mid) <= m) {
+		if(mid >= minRes && calculateSize(mid) <= m) {
 			res = mid;
 			rt = mid - 1;
 		}
 		else lt = mid + 1;
 	}
-	res = max(minRes, res);
+	
 	cout << res;
 	return 0;
 }
