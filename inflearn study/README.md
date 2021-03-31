@@ -4,20 +4,20 @@
 
 <details><summary>다시 풀어볼 문제</summary>
 <p>
-- 2021.03.29 <br>
+- 2021.04.0? <br>
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
     - quiz 35 : 하나의 벡터만 선언하고  데이터 정렬<br>
     - quiz 37<br>
     - quiz 40 : MS_interview<br>
-    - quiz 41 : interview 연속된 숫자 합 구하기 - 수리 센스 --> 전략적 풀이<br>
-    - quiz 43,44 : 접근자체를 잘못했었음 - 결정알고리즘<br>
+    - quiz 41 <br>
+    - quiz 43,44 : 결정알고리즘<br>
     - quiz 45 : 원형데이터를 관리하는 최적의 컨테이너 // 아니고 시뮬레이션 문제<br>
     - quiz 51 : Dynamic Programming<br>
     - quiz 52 : 투포인트 알고리즘<br>
     - quiz 53 : 16진수 변환 처리<br>
     - quiz 55 : 스택 <br>
-    <!--56번부터~ :) -->
+    <!--56번부터~75번까지 :) -->
 </p>
 </details>
 
