@@ -12,11 +12,11 @@
     - quiz 40 : MS_interview<br>
     - quiz 41 <br>
     - quiz 43,44 : 결정알고리즘<br>
-    - quiz 45 : 원형데이터를 관리하는 최적의 컨테이너 // 아니고 시뮬레이션 문제<br>
-    - quiz 51 : Dynamic Programming<br>
-    - quiz 52 : 투포인트 알고리즘<br>
-    - quiz 53 : 16진수 변환 처리<br>
-    - quiz 55 : 스택 <br>
+    - quiz 45 : v.erase 를 쓰지말고 풀이할 것<br>
+    - quiz 51<br>
+    - quiz 52<br>
+    - quiz 53<br>
+    - quiz 55<br>
     <!--56번부터~75번까지 :) -->
 </p>
 </details>
