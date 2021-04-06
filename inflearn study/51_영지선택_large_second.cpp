@@ -10,7 +10,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 	
-	freopen("input.txt", "rt", stdin);
+//	freopen("input.txt", "rt", stdin);
 	cin >> n >> m;
 	for(int i = 1; i <= n; i++) {
 		for(int j = 1; j <= m; j++) {
@@ -19,12 +19,6 @@ int main() {
 		}
 	}
 	cin >> x >> y;
-	for(int i = 0; i <= n; i++) {
-		for(int j = 0; j<=m ; j++) {
-			cout << arr[i][j] <<" ";
-		}
-		cout << endl;
-	}
 	int maxVal = -1;
 	for(int i = 1; i <= n; i++) {
 		for(int j = 1; j <= m ; j++) {
@@ -32,15 +26,13 @@ int main() {
 					  + res[i][j-1]
 					  - res[i-1][j-1]
 					  + arr[i][j];
-			maxVal = max(maxVal, res[i][j]);
+					  
+			if(i >= x && j >= y) {
+				maxVal = max(maxVal, res[i][j] - res[i-x][j] - res[i][j-y] + res[i-x][j-y]);
+			}
 		}
 	}
-	for(int i = 0; i <= n; i++) {
-		for(int j = 0; j<=m ; j++) {
-			cout << res[i][j] <<" ";
-		}
-		cout << endl;
-	}
+	
 	cout << maxVal;
 	return 0;
 }
