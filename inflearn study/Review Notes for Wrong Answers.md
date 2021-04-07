@@ -13,7 +13,7 @@
     - quiz 43,44 : 또 !! 접근자체를 잘못했었음 - 결정알고리즘 - 생각의 전환 pleaz...<br>
     - quiz 45 : v.erase 를 쓰지 말고 풀이할 것<br>
     - quiz 51 : Dynamic Programming<br>
-    - quiz 52 : 투포인트 알고리즘<br>
+    - quiz 52 : 투포인트 알고리즘 - 외국기업에서 많이 면접에서 출제되는 문제<br>
     - quiz 53 : 16진수 변환 처리<br>
     - quiz 55 : 스택 <br>
 - 2021.03~ <br>
@@ -95,6 +95,7 @@ while(lt <= rt) { // lt < rt 하면 예외케이스 있음
 > **v.erase() 를 쓰지말고 알고리즘 풀이하는 연습을 해야**   
 > 해당 문제는 배열을 0으로 초기화하고 k값이 되는 순간 0 -> 1로 변경시키는 코드로 구현  
 
-
-
-
+## 52
+- 소인수분해
+- three point algorithm
+    - need to make three pointer

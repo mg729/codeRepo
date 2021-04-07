@@ -2,43 +2,35 @@
 using namespace std;
 
 int n;
-int arr[1502];
 
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 	
-	freopen("input.txt", "rt", stdin);
+//	freopen("input.txt", "rt", stdin);
 	cin >> n;
+	int number = 1;
+	int idx = 1;
 	
-	int val = 1;
-	int i = 1;
-	arr[1]  = 1;
-	while(1) {
-		if(i > n) break;
-		
-		val++;
-		
-		int tmp = val;
-		while(1) {
-			if(tmp % 2 == 0)
-				tmp /= 2;
-			else if(tmp % 3 == 0)
-				tmp /= 3;
-			else if(tmp % 5 == 0)
-				tmp /= 5;
-			else
-				break;
+	while(true) {
+		int tmp = number;
+		while(tmp > 2 && tmp % 2 == 0) {
+			tmp /= 2;
 		}
-		
-		if(tmp == 1)
-		{
-			i++;
-		   	arr[i] = val;
+		while(tmp > 3 && tmp % 3 == 0) {
+			tmp /= 3;
 		}
+		while(tmp > 5 && tmp % 5 == 0) {
+			tmp /= 5;
+		}
+		if(tmp == 2 || tmp == 3 || tmp == 5) {
+			idx++;
+		}		
+		if(idx == n) break;
+		number++;
 	}
 	
-	cout << arr[n];
+	cout << number;
 	
 	return 0;
 }
