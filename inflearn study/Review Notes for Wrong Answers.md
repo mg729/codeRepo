@@ -14,7 +14,7 @@
     - quiz 45 : v.erase 를 쓰지 말고 풀이할 것<br>
     - quiz 51 : Dynamic Programming<br>
     - quiz 52 : 투포인트 알고리즘 - 외국기업에서 많이 면접에서 출제되는 문제<br>
-    - quiz 53 : 16진수 변환 처리<br>
+    - quiz 53 : Time limit 에러 없이 풀이하는 법<br>
     - quiz 55 : 스택 <br>
 - 2021.03~ <br>
 </p>
