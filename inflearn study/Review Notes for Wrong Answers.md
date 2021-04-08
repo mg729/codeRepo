@@ -99,3 +99,7 @@ while(lt <= rt) { // lt < rt 하면 예외케이스 있음
 - 소인수분해
 - three point algorithm
     - need to make three pointer
+
+## 53
+- K진수 로 변환하면 첫번째 value가 무조건 1인 것은 아님
+- 예 ) 512 16 (**200**)

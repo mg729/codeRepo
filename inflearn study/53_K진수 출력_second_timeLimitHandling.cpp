@@ -11,6 +11,8 @@ int main() {
 //	freopen("input.txt", "rt", stdin);
 	cin >> n >> k;
 	char str[20] = "0123456789ABCDEF";
+    // Below is the Error Code
+    /*
 	while(true) {
 		s.push(n%k);
 		n /= k;
@@ -18,6 +20,11 @@ int main() {
 			s.push(1);
 			break;
 		}
+	}
+	*/
+    while(n>0) {
+		s.push(n%k);
+		n /= k;
 	}
 	
 	
