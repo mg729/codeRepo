@@ -4,7 +4,7 @@
 
 <details><summary>다시 풀어볼 문제</summary>
 <p>
-- 2021.04.0? <br>
+- 2021.04.10 <br>
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
     - quiz 35 : 하나의 벡터만 선언하고  데이터 정렬<br>
@@ -16,7 +16,6 @@
     - quiz 51<br>
     - quiz 52<br>
     - quiz 53<br>
-    - quiz 55<br>
     <!--56번부터~75번까지 :) -->
 </p>
 </details>
