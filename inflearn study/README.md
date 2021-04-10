@@ -42,7 +42,8 @@
 [017 소수점 첫째자리에서 반올림](#Round_up_to_first_decimal_place)  
 [018 배열 index 설정](#How_to_handle_array_index)  
 [019 투포인트 알고리즘](#Two_Point_algorithm)  
-[020 K진수 변환](#Decimal_converter)
+[020 K진수 변환](#Decimal_converter)  
+[021 스택프레임, 스택오버플로우](#Stack_concept)
 
 
 ## max,min_Initialization
@@ -334,4 +335,14 @@ for(int i = 0; i < n; i++) {
 - 16진수 : hexadecimal
     - 16진수 (10 : A, 11: B, 12:C, 13:D, 14:E, 15:F)
 
+
+## Stack_concept
+> quiz 56  
+
+
+- 스택프레임 : main() 함수부터 보관, 호출되는 함수들을 스택에 쌓아두는 프레임, 각각의 프로세스마다 스택프레임을 갖게되는데 이때 스택내부적으로 매개변수, 지역변수, **복귀주소**를 보관한다.
+
+- 호출된 함수의 스택프레임이 자기의 복귀주소를 갖고 스택프레임을 생성시킨다.
+
+- 스택이 꽉차서 최상단의 스택프레임을 넘어가게 스택프레임을 생성시키려면 **스택 오버플로우**
 
