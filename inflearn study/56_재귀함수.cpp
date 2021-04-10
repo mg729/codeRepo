@@ -2,7 +2,6 @@
 using namespace std;
 
 int n;
-stack<int> s;
 
 void recursiveFunc1(int x) { //1 2 3 
 	if(x == 0) 	return;
