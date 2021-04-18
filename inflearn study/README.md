@@ -21,6 +21,7 @@
     - quiz 57 : 탈출조건 x==1 아니고 x==0<br>
     - quiz 58<br>
     - quiz 59 : MS 인터뷰문제 <!--아예 시작도 못함--><br>
+    - quiz 60<br>
 </p>
 </details>
 
