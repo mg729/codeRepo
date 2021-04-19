@@ -1,29 +1,38 @@
-#include<stdio.h>
-int n, a[11], total=0;
-bool flag=false;
-void DFS(int L, int sum){
-	if(sum>(total/2)) return;
-	if(flag==true) return;
-	if(L==n+1){
-		if(sum==(total-sum)){
-			flag=true;
-		}		
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val, total;
+int idx[12]; 
+bool isEqualSum; // false
+
+void dfs(int level, int sum) {
+	if(isEqualSum) return;
+	if(sum > (total/2) ) return;
+	if(level > n) {
+		if(sum == (total - sum)){
+			isEqualSum = true;
+			return;
+		}
 	}
-	else{
-		DFS(L+1, sum+a[L]);
-		DFS(L+1, sum);
-	}
+	dfs(level+1, sum+idx[level]);
+	dfs(level+1, sum);
 }
-int main(){
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
 	freopen("input.txt", "rt", stdin);
-	int i;
-	scanf("%d", &n);
-	for(i=1; i<=n; i++){
-		scanf("%d", &a[i]);
-		total+=a[i];
+	
+	cin >> n;
+	for(int i = 1; i <= n; i++) {
+		cin >> val;
+		idx[i] = val;
+		total += val;
 	}
-	DFS(1, 0);
-	if(flag) printf("YES\n");
-	else printf("NO\n");
+	
+	dfs(1, 0);
+	
+	if(isEqualSum) cout << "YES";
+	else cout << "NO";
+	
 	return 0;
 }
