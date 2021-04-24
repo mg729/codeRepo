@@ -10,9 +10,12 @@ void dfs(int level) {
 		return;
 	}
 	
-	for(int i = 1; level+i <= n; i++) {
-		if(matrix[level][level+i])
-			dfs(level+1);
+	// How to search 4 -> 2 -> 5 route???? 
+	for(int i = 1; level + i <= n; i++) {
+		if(matrix[level][level+i]) {
+			cout << level << " ";
+			dfs(level+i);	
+		}
 	}
 }
 
