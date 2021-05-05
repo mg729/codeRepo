@@ -27,6 +27,7 @@
     - quiz 64, 66<br>
     - quiz 67, 68<br>
     - quiz 69<br> <!--bfs : dfs는 재귀함수, bfs 는 큐-->
+    - quiz 70<br>
 </p>
 </details>
 
@@ -54,6 +55,7 @@
 [020 K진수 변환](#Decimal_converter)  
 [021 스택프레임, 스택오버플로우](#Stack_concept)  
 [022 다익스트라](#Dijkstra)  
+[023 dfs,bfs](#DFS_BFS)  
 
 
 ## max,min_Initialization
@@ -368,3 +370,17 @@ for(int i = 0; i < n; i++) {
     - 해당노드를 거쳐서 특정한 노드로 가는 경우를 고려하여 최소 비용을 갱신
 
 - 2차원 배열 행렬활용
+
+## DFS_BFS
+> DSF BFS 문제보고 구분하기
+
+- **DFS** : 경로탐색, 경로탐색 후 최소비용구하기 
+    - 재귀, stack
+- **BFS** : 최단 거리 
+    - queue
+
+- **최단거리 문제를 푼다면 BFS**
+    - 특히 가중치 없는 그래프의 최단경로문제는 only BFS
+- **이동할때마다 가중치가 붙어서 이동하거나 이동 과정에서 여러 제약이 있는 경우 DFS**
+
+
