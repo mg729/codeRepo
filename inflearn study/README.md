@@ -28,6 +28,8 @@
     - quiz 67, 68<br>
     - quiz 69<br> <!--bfs : dfs는 재귀함수, bfs 는 큐-->
     - quiz 70<br>
+    - quiz 71<br>
+    - quiz 72<br>
 </p>
 </details>
 
