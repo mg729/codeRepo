@@ -1,39 +1,44 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int n, k;
+int n, k, val;
+int prince[1002];
 int arr[1002];
+
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	freopen("input.txt", "rt", stdin);
+//	freopen("input.txt", "rt", stdin);
 	cin >> n >> k;
+	for(int i = 1; i<=n; i++) {
+		prince[i] = i;
+	}
 	
 	int pos = 1;
-	int size = n;
 	while(1) {
-		for(int i = 1; i <= k; i++) {
-			if(pos > n) pos = 1; /// 여기 어캐바꾸지... 
-			if(i == k)  {
-				cout << pos << endl;
-				arr[pos] = 1;
+		int tmp = k;
+		while(tmp) {
+			if(pos > n) pos = 1;
+			if(arr[pos] == 0) {
+				tmp--;
 			}
 			pos++;
 		}
+		arr[--pos] = 1;
 		
 		int count = 0;
-		int lastVal;
+		int idx = 0;
 		for(int i = 1; i <=n ; i++) {
 			if(arr[i] == 0) {
 				count++;
-				lastVal = i;
+				idx = i;
 			}
 		}
 		if(count == 1) {
-			cout << lastVal;
+			cout << prince[idx];
 			break;
 		}
 	}
-	
+
 	return 0;
 }
