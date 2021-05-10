@@ -29,7 +29,7 @@
     - quiz 69<br> <!--bfs : dfs는 재귀함수, bfs 는 큐-->
     - quiz 70<br>
     - quiz 71<br>
-    - quiz 72<br>
+    - quiz 72<!--pop하는 데이터를배열 뒤로 다시 push하는 원형데이터를 다룰때 queue 자료구조를 활용합시다--><br>
 </p>
 </details>
 
