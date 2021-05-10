@@ -30,6 +30,7 @@
     - quiz 70<br>
     - quiz 71<br>
     - quiz 72<!--pop하는 데이터를배열 뒤로 다시 push하는 원형데이터를 다룰때 queue 자료구조를 활용합시다--><br>
+    - quiz 74<br>
 </p>
 </details>
 
@@ -58,6 +59,7 @@
 [021 스택프레임, 스택오버플로우](#Stack_concept)  
 [022 다익스트라](#Dijkstra)  
 [023 dfs,bfs](#DFS_BFS)  
+[024 priority queue](#priority_queue)  
 
 
 ## max,min_Initialization
@@ -385,4 +387,25 @@ for(int i = 0; i < n; i++) {
     - 특히 가중치 없는 그래프의 최단경로문제는 only BFS
 - **이동할때마다 가중치가 붙어서 이동하거나 이동 과정에서 여러 제약이 있는 경우 DFS**
 
+## priority_queue
+> quiz 73
+- 우선순위 큐 **priority_queue**
+    - 부모노드가 왼쪽자식과 오른쪽 자식값보다 크도록 트리가 구성
+    - 레벨 별로 노드에 데이터가 삽입되고 삽입된 이후 부모노드와 계속 값을 비교하여 트리내부데이터를 재구성
+    - 데이터 *pop()*하는 경우 : 가장 말단의 제일 오른쪽 데이터가 루트노드로 삽입되고 다시 트리 내부적으로 값을 비교하여 트리 재구성
+    - 데이터 *top()*하는 경우 : max heap 구조라서 가장 최댓값인 루트노드값을 반환
 
+- 최대값 구하기
+
+- 최소값 구하기
+> quiz74
+
+```c++
+template<
+    class T,
+    class Container = std::vector<T>,
+    class Compare = std::less<typename Container::value_type>
+> class priority_queue;
+
+priority_queue <int, vector<int>, greater<int>> pq;
+```
