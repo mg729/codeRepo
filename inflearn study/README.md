@@ -31,6 +31,7 @@
     - quiz 71<br>
     - quiz 72<!--pop하는 데이터를배열 뒤로 다시 push하는 원형데이터를 다룰때 queue 자료구조를 활용합시다--><br>
     - quiz 74<br>
+    - quiz 75<!--구조체를 이용한 STL vector 정렬 공부 확실히 하기--><br>
 </p>
 </details>
 
