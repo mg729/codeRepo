@@ -1,6 +1,6 @@
 # 프로그래밍1
 
-- [해설](https://prgms.tistory.com/57)
+- [해설](https://www.geeksforgeeks.org/count-divisors-n-on13/)
 
 ## 제출코드
 
@@ -36,22 +36,9 @@ int solution(int left, int right) {
 ## 문제 해설
 > 약수의 개수를 구하는 방법을 구현 할 수 있는지
 
+- 1부터 n까지의 합 **x(x+1) / 2**
 
-- 약수의 개수 **x(x+1) / 2**
-
-- **sqrt()**
-
-```c++
-for(i=1; i*i<n ; i++){
-
-	if(n%i==0)
-
-	printf("%d  %d",  i, n/i);  //약수는 쌍으로 존재
-}
-
-if(i*i == n) printf("  %d", i);   //n이 제곱수인 경우
-
-```
+- **sqrt()** : 소수 prime number 판별 알고리즘에서 활용
 
 
 # 프로그래밍2
