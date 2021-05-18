@@ -216,19 +216,17 @@ int main() {
 		- 만약 x의 비트를 두 개 바꿀 경우, 일단 하나의 0을 1로 바꿔야하는데, 다른 하나는 그보다 더 낮으면서 제일 높은 자리의 1을 0으로 바꾸는 것이 이상적
 
 
+## myCode(PASS)
+
+
 ```c++
-#include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-int main() {
-	vector<long long> numbers;
-	vector<long long> answer;
-
-//	numbers.push_back(13);
-    numbers.push_back(15);
+vector<long long> solution(vector<long long> numbers) {
+    vector<long long> answer;
     
     long long val;
     for(long long i = 0; i < numbers.size(); i++) {
@@ -245,12 +243,7 @@ int main() {
 		}
 		
     	if(numbers[i] % 2 == 0) { // even
-    		for(int j = bitStr.size() - 1; j >= 0; j--) {
-    			if(bitStr[j] == '0') {
-    				bitStr.replace(j, 1, "1");
-    				break;
-				}
-			}
+            answer.push_back(numbers[i] + 1);
 		}
 		else { //odd
 			// if odd bit has no 0 value --> add 0
@@ -261,44 +254,42 @@ int main() {
     				break;
 				}
 			}
+			
 			if(!isContainZero) {
 				bitStr.insert(0, 1, '0');
+				bitStr.replace(bitStr.begin(), bitStr.begin() + 2, "10");
 			}
-			long long idx = 0;
-			for(long long j = 0; j < bitStr.size(); j++) {
-    			if(bitStr[j] == '0') {
-    				bitStr.replace(j, 1, "1");
-    				idx = j;
-    				break;
+			else {
+				long long idx = 0;
+				for(long long j = bitStr.size(); j >= 0 ; j--) {
+	    			if(bitStr[j] == '0') {
+	    				bitStr.replace(j, 1, "1");
+	    				idx = j;
+	    				break;
+					}
+				}
+				
+				for(long long j = idx + 1; j < bitStr.size(); j++) {
+	    			if(bitStr[j] == '1') {
+	    				bitStr.replace(j, 1, "0");
+	    				idx = j;
+	    				break;
+					}
 				}
 			}
-			for(long long j = idx + 1; j < bitStr.size(); j++) {
-    			if(bitStr[j] == '1') {
-    				bitStr.replace(j, 1, "0");
-    				break;
-				}
-			}
+            long long res = 0;
+            long long two = 1;
+            for(long long j = bitStr.size() - 1; j >= 0; j--) {			
+                if(bitStr[j] == '1') {
+                    res += two;
+                }
+                two *= 2;
+            }		
+            answer.push_back(res);
 		}
-		
-		long long res = 0;
-		long long two = 1;
-		for(long long j = bitStr.size() - 1; j >= 0; j--) {			
-			if(bitStr[j] == '1') {
-				res += two;
-				cout << res << endl;
-			}
-			two *= 2;
-		}
-		
-		answer.push_back(res);
 	}
     
-    
-	for(auto x : answer) {
-    	cout << "the Answer is : " << x << endl;
-	}
-	
-    return 0;
+    return answer;
 }
 ```
 
@@ -324,4 +315,43 @@ assert("Exmplr" == s);
 // insert(size_type index, const char* s)
 s.insert(2, "e");
 assert("Exemplr" == s);
+```
+
+## bitmask c++ 연산
+- **비트마스크 (BitMask)란?**
+	- 비트마스크는 이진수를 사용하는 컴퓨터의 연산 방식을 이용하여, 정수의 이진수 표현을 자료구조로 쓰는 기법
+- **비트연산자**
+	- AND : (**&**) 두 정수를 한 bit씩 비교하면서 해당 bit가 둘다 1인경우에 1
+	- OR : (**|**) 두 정수를 한 bit씩 비교하면서 하나의 bit라도 1인 경우에 1
+	- XOR : (**^**) 두 정수를 한 bit씩 비교하면서 하나의 bit만 1인경우에 1
+	- NOT : (**~**) 정수하나를 입력받아서 한 비트씩 탐색하며 1인 bit는 0으로, 0인 bit는 1로 
+	- Shit : (**<<**)/(**>>**) 비트들을 왼쪽 또는 오른쪽으로 원하는 만큼 움직이고 움직이고 나서 빈 자리는 0으로 채워진다.
+	
+	```c++
+	// 13 - 00001101
+	int bitmask1 = (13 << 1); // 00011010
+    int bitmask2 = (13 >> 1); // 00000110
+	cout << bitmask1 << endl; // 26
+	cout << bitmask2 << endl; // 6
+	```
+
+## bitmask C++ 연산 응용 해답
+
+- 이진수에서 홀수가 나오려면 무조건 마지막의 1의 자리수인 1이 있어야함
+- 왜냐하면 이진수의 각 자리수는 2의 지수승으로 치환되므로 홀수가 구해지려면 무조건 마지막 1의 자리수인 1이 1이어야함
+
+
+```c++
+#include <vector>
+std::vector<long long> solution(std::vector<long long> numbers) {
+    std::vector<long long> answer;
+    for (long long number : numbers) {
+        long long bit = 1; // l의 자리수
+        while ((number & bit) > 0) { 
+			bit <<= 1; // bit = (bit << 1);
+		}
+        answer.push_back(number + bit - (bit >> 1));
+    }
+    return answer;
+}
 ```
