@@ -7,7 +7,6 @@
 - 2021.00.00<br>
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
-    - quiz 35 : 하나의 벡터만 선언하고  데이터 정렬<br>
     - quiz 37<br>
     - quiz 40 : MS_interview<br>
     - quiz 41 <br>

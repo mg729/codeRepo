@@ -3,9 +3,8 @@
     - 56번부터 ~ 75번까지
 
 - **2021.05.13 ~ 2021.05.00(오답 풀이)**
-    - quiz 26
-    - quiz 30 
-    - quiz 35 
+    - quiz 26 : 병합정렬
+    - quiz 30 : 구글인터뷰
     - quiz 37
     - quiz 40 
     - quiz 41 
@@ -30,3 +29,79 @@
     - quiz 74
     - quiz 75
 
+
+### quiz26
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val, cnt;
+int a; //ability
+int arr[10002];
+int ranking[10002];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	for(int i = 0; i < n; i++) {
+		cin >> val;
+		arr[i] = val;		
+	}
+	
+	ranking[0] = 1;
+	for(int i = 1; i < n; i++) {
+		cnt = 1;
+		for(int j = 0; j < i; j++) {
+			if(arr[j] >= arr[i]) {
+				cnt++;
+			}
+		}
+		ranking[i] = cnt;
+	}
+	
+	for(int i = 0; i < n; i++) {
+		cout << ranking[i] << " ";
+	}
+	
+	return 0;
+}
+```
+
+### quiz35
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val, tmp;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	vector<int> v(n);
+	for(int i = 0; i < n; i++) {
+		cin >> val;
+		
+		v[i] = val;
+		int j = i;
+		while(j > 0 && v[j] < 0) {
+			if(v[j-1] < 0) break;
+			tmp = v[j-1];
+			v[j-1] = v[j];
+			v[j] = tmp;
+			j--;
+		}
+	}
+	
+	for (auto x : v) {
+		cout << x << " ";
+	}
+	
+	return 0;
+}
+```
