@@ -5,7 +5,6 @@
 - **2021.05.13 ~ 2021.05.00(오답 풀이)**
     - quiz 26 : 병합정렬
     - quiz 30 : 구글인터뷰
-    - quiz 37
     - quiz 40 
     - quiz 41 
     - quiz 43,44
@@ -105,3 +104,58 @@ int main() {
 	return 0;
 }
 ```
+
+## quiz37
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int s, n, mem, maxIdx, k;
+int arr[1002];
+int check[1002];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> s >> n;
+	
+	for(int i = 0; i < n; i++) {
+		cin >> mem;
+		arr[maxIdx] = mem;
+		if(check[mem]) { //Cache Hit
+			int idx = 0;
+			int j = 0;
+			while(1) {
+				// find idx 
+				if(arr[j] == mem) {
+					idx = j;
+					break;
+				}
+				j++;
+			}
+			for(j = idx; j < i-1; j++) {
+				// swapping
+				int tmp = arr[j+1];
+				arr[j+1] = arr[j];
+				arr[j] = tmp;
+			}	
+		}
+		else {
+			maxIdx++;
+		}
+		
+		check[mem] = 1;		
+	}
+	
+	for(int i = 0; i < s; i++) {
+		cout << arr[maxIdx-1] << " ";
+		maxIdx--;
+	}
+
+	return 0;
+}
+```
+

@@ -7,7 +7,6 @@
 - 2021.00.00<br>
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
-    - quiz 37<br>
     - quiz 40 : MS_interview<br>
     - quiz 41 <br>
     - quiz 43,44 : 결정알고리즘<br>
