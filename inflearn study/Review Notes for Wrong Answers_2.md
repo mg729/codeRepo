@@ -118,7 +118,7 @@ int check[1002];
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-//	freopen("input.txt", "rt", stdin);
+	freopen("input.txt", "rt", stdin);
 	
 	cin >> s >> n;
 	
@@ -136,7 +136,7 @@ int main() {
 				}
 				j++;
 			}
-			for(j = idx; j < i-1; j++) {
+			for(j = idx; j < maxIdx; j++) {
 				// swapping
 				int tmp = arr[j+1];
 				arr[j+1] = arr[j];
