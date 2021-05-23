@@ -5,6 +5,9 @@
 - **2021.05.13 ~ 2021.05.00(오답 풀이)**
     - quiz 26 : 병합정렬
     - quiz 30 : 구글인터뷰
+	- [quiz 26](#quiz26)
+	- [quiz 35](#quiz35) 
+	- [quiz 37](#quiz37)
     - quiz 40 
     - quiz 41 
     - quiz 43,44
@@ -105,7 +108,7 @@ int main() {
 }
 ```
 
-## quiz37
+### quiz37
 
 ```c++
 #include<bits/stdc++.h>
@@ -158,4 +161,4 @@ int main() {
 	return 0;
 }
 ```
-## quiz40
+### quiz40
