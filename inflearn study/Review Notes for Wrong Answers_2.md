@@ -8,9 +8,10 @@
 	- [quiz 26](#quiz26)
 	- [quiz 35](#quiz35) 
 	- [quiz 37](#quiz37)
-    - [quiz 40](#quiz40) 
-    - [quiz 41](#quiz41) 
-    - quiz 43,44
+    - [quiz 40 : 교집합을 구하는 투포인트 알고리즘 풀이](#quiz40) 
+    - [quiz 41 : 연속된 합을 구하는 단순 수리 풀이법](#quiz41) 
+    - quiz 43
+	- quiz 44
     - quiz 45 : v.erase 를 쓰지말고 풀이할 것
     - quiz 51
     - quiz 52
