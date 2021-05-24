@@ -8,8 +8,8 @@
 	- [quiz 26](#quiz26)
 	- [quiz 35](#quiz35) 
 	- [quiz 37](#quiz37)
-    - quiz 40 
-    - quiz 41 
+    - [quiz 40](#quiz40) 
+    - [quiz 41](#quiz41) 
     - quiz 43,44
     - quiz 45 : v.erase 를 쓰지말고 풀이할 것
     - quiz 51
@@ -162,3 +162,131 @@ int main() {
 }
 ```
 ### quiz40
+
+- FAIL
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, val;
+int arr[30002];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n;
+	for(int i = 0; i < n; i++) {
+		cin >> val;
+		arr[val] = 1;
+	}
+	cin >> m;
+	vector<int> v;
+	for(int i = 0; i < m; i++) {
+		cin >> val;
+		if(arr[val]) {
+			v.push_back(val);
+		}
+	}
+	
+	sort(v.begin(), v.end());
+	
+	for(auto x : v) {
+		cout << x << " ";
+	}
+
+	return 0;
+}
+```
+
+- **PASS**
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, val;
+int arr1[30002];
+int arr2[30002];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	for(int i = 0; i < n; i++) {
+		cin >> val;
+		arr1[i] = val;
+	}
+	sort(arr1, arr1 + n);
+
+	cin >> m;
+	for(int i = 0; i < m; i++) {
+		cin >> val;
+		arr2[i] = val;
+	}
+	sort(arr2, arr2 + m);
+
+	int p1 = 0;
+	int p2 = 0;
+	vector<int> v3;
+	while(p1<n && p2<m) {
+		if(arr1[p1] > arr2[p2]) {
+			p2++;
+		}
+		else if(arr1[p1] < arr2[p2]) {
+			p1++;
+		}
+		else { // arr1[p1] == arr2[p2]
+			v3.push_back(arr1[p1]);
+			p1++;
+			p2++;
+		}
+	}
+	
+	for(auto x : v3) {
+		cout << x << " ";
+	}
+	
+	return 0;
+}
+```
+
+
+### quiz41
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int a, cnt;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> a;
+	int tmp = a; // store a value to print out
+	
+	a--; // 맨 처음에 1을 빼주고 그 다음에 b를 빼주고..하는거라서..우선 a는 1빼주고 시작	
+	int b = 1;
+	while(a > 0) {
+		b++; // b 가 15 - 3 할때 3을 의미 즉, n만큼 뺐다 라는 의미
+		a = a - b;
+		if(a%b == 0) {
+			for(int i = 1; i < b; i++) {
+				cout << i+(a/b) << " + ";
+			}
+			cout << b + (a/b) << " = " << tmp <<"\n";
+			cnt++;
+		}
+	}
+
+	cout << cnt;	
+	return 0;
+}
+```

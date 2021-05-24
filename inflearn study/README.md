@@ -7,8 +7,8 @@
 - 2021.00.00<br>
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
-    - quiz 40 : MS_interview<br>
-    - quiz 41 <br>
+    - quiz 41 (연속된 자연수의 합 풀이 방법 --> 암기)<br>
+    <!--Please memorize above quiz solutions// 오답노트하기보다는 해설 그냥 외울 것-->
     - quiz 43,44 : 결정알고리즘<br>
     - quiz 45 : v.erase 를 쓰지말고 풀이할 것<br>
     - quiz 51<br>
