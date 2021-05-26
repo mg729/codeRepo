@@ -10,9 +10,9 @@
 	- [quiz 37](#quiz37)
     - [quiz 40 : 교집합을 구하는 투포인트 알고리즘 풀이](#quiz40) 
     - [quiz 41 : 연속된 합을 구하는 단순 수리 풀이법](#quiz41) 
-    - quiz 43
-	- quiz 44
-    - quiz 45 : v.erase 를 쓰지말고 풀이할 것
+    - [quiz 43](#quiz43)
+	- [quiz 44](#quiz44)
+    - [quiz 45](#quiz45)
     - quiz 51
     - quiz 52
     - quiz 53
@@ -291,3 +291,55 @@ int main() {
 	return 0;
 }
 ```
+
+### quiz43
+
+```c++
+
+```
+
+### quiz44
+
+```c++
+
+```
+
+### quiz45
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, k;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> k;
+	
+	queue<int> q;
+	for(int i = 1; i <= n; i++) {
+		q.push(i);
+	}
+	
+	int idx = 1;
+	while(!q.empty()) {
+		
+		if(idx == k) {
+			idx = 1;			
+		}
+		else {
+			q.push(q.front());
+			idx++;
+		}
+		if(q.size() == 1) cout << q.front();
+		q.pop();
+	}
+
+	return 0;
+}
+```
+
