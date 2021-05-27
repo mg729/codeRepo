@@ -8,8 +8,8 @@
     - quiz 26 (병합정렬풀이)<br>
     - quiz 30 (large)<br>
     - quiz 41 (연속된 자연수의 합 풀이 방법 --> 암기)<br>
-    <!--Please memorize above quiz solutions// 오답노트하기보다는 해설 그냥 외울 것-->
-    - quiz 43,44 : 결정알고리즘<br>
+    - quiz 43 : 결정알고리즘 --> backjoon (Binary Search)<br>
+    <!--Please memorize above quiz solutions-->
     - quiz 51<br>
     - quiz 52<br>
     - quiz 53<br>

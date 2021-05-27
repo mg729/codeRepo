@@ -294,14 +294,109 @@ int main() {
 
 ### quiz43
 
-```c++
 
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, val, lt, rt, mid, res;
+vector<int> v;
+
+int numberOfDvd(int time) {
+	int cnt = 1, sum = 0;
+	for(int i = 0; i < n; i++) {
+		if(sum + v[i] > time) {
+			cnt++;
+			sum = v[i];
+		}
+		else sum += v[i];
+	}
+	return cnt;
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> m;
+	lt = 1;
+	int maxVal = -2147000000;
+	for(int i = 0; i < n; i++) {
+		cin >> val;
+		v.push_back(val);
+		rt += val;
+		if(val > maxVal) maxVal = val;
+	}
+	
+	while(lt <= rt) {
+		mid = (lt+rt)/2;
+		if(mid >= maxVal && numberOfDvd(mid) <= m) {
+			res = mid;
+			rt = mid - 1;
+		}
+		else {
+			lt = mid + 1;
+		}
+	}
+	cout << res;
+	
+	return 0;
+}
 ```
 
 ### quiz44
 
 ```c++
+#include<bits/stdc++.h>
+using namespace std;
 
+int n, c, val;
+vector<int> v;
+
+int count (int x) {
+	int cnt = 1;
+	int a = v[0];
+	for(int i = 1; i < n; i++) {
+		if(v[i] - a >= x) {
+			cnt++;
+			a = v[i];
+		}
+	}
+	return cnt;
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> c;
+	for(int i = 0 ; i < n ;  i++) {
+		cin >> val;
+		v.push_back(val);                    
+	}
+	sort(v.begin(), v.end());
+	
+	int maxDist = -2147000000;
+	int lt = v[0];
+	int rt = v[n-1];
+	int mid = 0;
+	while(lt <= rt) {
+		mid = (lt + rt) / 2;
+		if(count(mid) >= c) {
+			if(maxDist < mid) maxDist = mid;
+			lt = mid + 1;			
+		}
+		else {
+			rt = mid - 1;
+		}
+	}
+	
+	cout << maxDist;
+
+	return 0;
+}
 ```
 
 ### quiz45
