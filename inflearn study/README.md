@@ -10,7 +10,6 @@
     - quiz 41 (연속된 자연수의 합 풀이 방법 --> 암기)<br>
     - quiz 43 : 결정알고리즘 --> backjoon (Binary Search)<br>
     <!--Please memorize above quiz solutions-->
-    - quiz 51<br>
     - quiz 52<br>
     - quiz 53<br>
     <!--56번부터~75번까지 :) -->

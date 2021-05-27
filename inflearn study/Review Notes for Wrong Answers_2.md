@@ -13,9 +13,9 @@
     - [quiz 43](#quiz43)
 	- [quiz 44](#quiz44)
     - [quiz 45](#quiz45)
-    - quiz 51
-    - quiz 52
-    - quiz 53
+    - [quiz 51](#quiz51)
+    - [quiz 52](#quiz52)
+    - [quiz 53](#quiz53)
     - quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념
     - quiz 57
     - quiz 58
@@ -436,5 +436,58 @@ int main() {
 
 	return 0;
 }
+```
+
+## quiz51
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int h, w, val, x, y;
+int res[702][702];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> h >> w;
+	
+	for(int i = 1; i <= h; i++) {
+		for(int j = 1; j <= w ; j++) {
+			cin >> val;			
+			res[i][j] = res[i-1][j] + res[i][j-1] - res[i-1][j-1] + val;
+		}
+	}
+
+	cin >> x >> y;
+	int maxTree = -2147000000;
+	for(int i = x ; i <= h; i++) {
+		for(int j = y; j <= w; j++) {
+			int tree = res[i][j] - res[i-x][j] - res[i][j-y] + res[i-x][j-y];
+			if(maxTree < tree) maxTree = tree;
+		}
+	}
+	
+	cout << maxTree;
+	
+	
+	return 0;
+}
+```
+
+
+## quiz52
+
+```c++
+
+```
+
+
+## quiz53
+
+```c++
+
 ```
 
