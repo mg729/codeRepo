@@ -480,9 +480,58 @@ int main() {
 
 ## quiz52
 
+- FAIL (TIME_LIMIT)
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	int cnt = 2;
+	vector<int> v;
+	v.push_back(1);
+	while(v.size() < n) {
+		int tmp = cnt;
+		if(tmp % 2 == 0 ||
+		   tmp % 3 == 0 ||
+		   tmp % 5 == 0) {
+		   while(1) {
+			   	if(tmp % 2 == 0) tmp /= 2;	
+				if(tmp % 3 == 0) tmp /= 3;
+				if(tmp % 5 == 0) tmp /= 5;
+				
+				if(tmp % 2 == 0 ||
+			   	   tmp % 3 == 0 ||
+			   	   tmp % 5 == 0) {
+			   	   	continue;
+				}
+				else break;		   	
+		   }
+		}
+		
+		if(tmp == 1) v.push_back(cnt);
+		cnt++;
+	}
+	
+	cout << v.back();
+	
+		
+	return 0;
+}
+```
+- PASS (REMOVE DUPLICATION OF FOR LOOP)
+
 ```c++
 
 ```
+
 
 
 ## quiz53
