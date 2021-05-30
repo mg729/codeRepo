@@ -526,7 +526,7 @@ int main() {
 	return 0;
 }
 ```
-- PASS (REMOVE DUPLICATION OF FOR LOOP)
+- PASS (REMOVE FOR LOOP DUPLICATION)
 
 ```c++
 
