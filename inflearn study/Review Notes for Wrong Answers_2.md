@@ -16,7 +16,7 @@
     - [quiz 51](#quiz51)
     - [quiz 52](#quiz52)
     - [quiz 53](#quiz53)
-    - quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념
+    - [quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념](#quiz56)
     - quiz 57
     - quiz 58
     - quiz 59 
@@ -526,7 +526,7 @@ int main() {
 	return 0;
 }
 ```
-- PASS (REMOVE FOR LOOP DUPLICATION)
+- PASS (REMOVE FOR LOOP DUPLICATION) : 투포인트알고리즘
 
 ```c++
 
@@ -535,6 +535,86 @@ int main() {
 
 
 ## quiz53
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n,k;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> k;
+	
+	stack<string> s;
+	
+	while(n > 0) {
+		
+		if(n % k != 0) {
+			int val = n % k;
+			if(val > 9) {
+				if(val == 10) s.push("A"); 
+				else if(val == 11) s.push("B");
+				else if(val == 12) s.push("C");
+				else if(val == 13) s.push("D"); 
+				else if(val == 14) s.push("E");
+				else s.push("F");
+			}
+			else  {
+				s.push(to_string(val));
+			}
+		}
+		else {
+			s.push("0");
+		}
+		n /= k;
+	}
+
+	while(!s.empty()) {
+		cout << s.top();
+		s.pop();
+	}
+	
+	return 0;
+}
+```
+
+- cleanCode
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n,k;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> k;
+	
+	stack<int> s;
+	string str = "0123456789ABCDEF";
+	while(n > 0) {
+		s.push(n%k);
+		n /= k;
+	}
+
+	while(!s.empty()) {
+		cout << str[s.top()];
+		s.pop();
+	}
+	
+	return 0;
+}
+```
+
+## quiz56
 
 ```c++
 

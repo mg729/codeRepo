@@ -8,6 +8,8 @@ int main(){
 	int n, k;
 	stack<int> s;
 	char str[20]="0123456789ABCDEF";
+//	string str = "0123456789ABCDEF";
+	
 	scanf("%d %d", &n, &k);
 	while(n>0){
 		s.push(n%k);

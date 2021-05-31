@@ -9,9 +9,9 @@
     - quiz 30 (large)<br>
     - quiz 41 (연속된 자연수의 합 풀이 방법 --> 암기)<br>
     - quiz 43 : 결정알고리즘 --> backjoon (Binary Search)<br>
+    - quiz 52 : 기업인터뷰로 자주출제되는 문제<!--아래019설명참고--><br>
+    - quiz 53 : 스택 자료구조--> string 응용<br>
     <!--Please memorize above quiz solutions-->
-    - quiz 52<br>
-    - quiz 53<br>
     <!--56번부터~75번까지 :) -->
     - quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념<br>
     - quiz 57 : 탈출조건 x==1 아니고 x==0<br>
