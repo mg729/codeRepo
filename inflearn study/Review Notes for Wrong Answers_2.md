@@ -617,6 +617,55 @@ int main() {
 ## quiz56
 
 ```c++
+#include<bits/stdc++.h>
+using namespace std;
 
+int n;
+
+void recursiveFunc(int x) {
+	if(x == 0) {
+		return;
+	}
+	recursiveFunc(x-1);
+	cout << x  << " ";
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	recursiveFunc(n);
+
+	return 0;
+}
 ```
 
+## quiz57
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n;
+
+void recur(int x) {
+	if(x == 0) {
+		return;
+	}
+	recur(x/2);
+	cout << x%2;
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	recur(n);
+
+	return 0;
+}
+```
