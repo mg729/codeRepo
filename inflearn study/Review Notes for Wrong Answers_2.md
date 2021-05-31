@@ -526,10 +526,44 @@ int main() {
 	return 0;
 }
 ```
-- PASS (REMOVE FOR LOOP DUPLICATION) : 투포인트알고리즘
+- **PASS (REMOVE FOR LOOP DUPLICATION) : 투포인트알고리즘응용**
+- **Three point Algorithm**
 
 ```c++
+#include<bits/stdc++.h>
+using namespace std;
 
+int n, p2, p3, p5;
+int arr[1502];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n;
+	p2 = p3 = p5 = 1;
+	int minVal = 2147000000;
+	int idx = 1;
+	arr[1] = 1;
+	while(idx <= n) {
+		int tmp2 = arr[p2]*2;
+		int tmp3 = arr[p3]*3;
+		int tmp5 = arr[p5]*5;
+		
+		if(tmp2 < tmp3) minVal = tmp2;
+		else minVal = tmp3;
+		
+		if(tmp5 < minVal) minVal = tmp5;
+		
+		if(tmp2 == minVal) p2++;
+		if(tmp3 == minVal) p3++;
+		if(tmp5 == minVal) p5++;
+		
+		arr[++idx] = minVal;		
+	}
+	cout << arr[idx-1];
+	return 0;
+}
 ```
 
 
