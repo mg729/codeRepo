@@ -17,8 +17,8 @@
     - [quiz 52](#quiz52)
     - [quiz 53](#quiz53)
     - [quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념](#quiz56)
-    - quiz 57
-    - quiz 58
+    - [quiz 57](#quiz57)
+    - [quiz 58](#quiz58)
     - quiz 59 
     - quiz 60 : 59번이랑 다른방식으로 풀이할 것<!--강의 다시 보기, 강의처럼 면접 대비 멘트 연습해 볼 것-->
     - quiz 61 : 문제에서 발전 - 특정수를 만드는 요소들을 출력할 것<!--예를들어 6+8-2=12 인 경우, -2 0 6 8 이렇게 출력할 것 -->
@@ -702,4 +702,53 @@ int main() {
 
 	return 0;
 }
+```
+## quiz58
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+void preOrder(int x) {
+	if(x > 7) return;
+	cout << x << " ";
+	preOrder(x*2);
+	preOrder(x*2 + 1);	
+}
+
+void inOrder(int x) {
+	if(x > 7) return;
+	inOrder(x*2);
+	cout << x << " ";
+	inOrder(x*2 + 1);	
+	
+}
+
+void postOrder(int x) {
+	if(x > 7) return;
+	postOrder(x*2);
+	postOrder(x*2 + 1);	
+	cout << x << " ";
+}
+
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	preOrder(1); // root left right
+	cout << "\n";
+	inOrder(1); // left root right
+	cout << "\n";
+	postOrder(1); // left right root
+	cout << "\n";
+	
+	return 0;
+}
+```
+
+## quiz59
+
+```c++
+
 ```
