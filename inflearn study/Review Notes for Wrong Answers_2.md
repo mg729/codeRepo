@@ -6,7 +6,7 @@
     - quiz 26 : 병합정렬
     - quiz 30 : 구글인터뷰
 	- [quiz 26](#quiz26)
-	- [quiz 35](#quiz35) 
+	- [quiz 35](#quiz35)
 	- [quiz 37](#quiz37)
     - [quiz 40 : 교집합을 구하는 투포인트 알고리즘 풀이](#quiz40) 
     - [quiz 41 : 연속된 합을 구하는 단순 수리 풀이법](#quiz41) 
@@ -19,11 +19,12 @@
     - [quiz 56 : 스택 보충영상 (면접대비) --> 스택프레임/스택오버플로우 개념](#quiz56)
     - [quiz 57](#quiz57)
     - [quiz 58](#quiz58)
-    - quiz 59 
-    - quiz 60 : 59번이랑 다른방식으로 풀이할 것<!--강의 다시 보기, 강의처럼 면접 대비 멘트 연습해 볼 것-->
-    - quiz 61 : 문제에서 발전 - 특정수를 만드는 요소들을 출력할 것<!--예를들어 6+8-2=12 인 경우, -2 0 6 8 이렇게 출력할 것 -->
-    - quiz 62 : <!--병합정렬 강의듣고 100프로 이해한적 오늘이 레알 처음... 명강의다 강의 또듣자-->
-    - quiz 64, 66
+    - [quiz 59](#quiz59)
+    - [quiz 60](#quiz60) : void dfs(int level, int sum) - 부분집합의 합을 함수파라미터로 관리
+    - [quiz 61](#quiz61) : 문제에서 발전 - 특정수를 만드는 요소들을 출력할 것<!--예를들어 6+8-2=12 인 경우, -2 0 6 8 이렇게 출력할 것 -->
+    - [quiz 62](#quiz62) : 병합정렬 Point **1. 후위순회방식 2. tmp 배열 & point 변수(p1,p2,p3)**
+    - [quiz 64](#quiz64)
+	- [quiz 66](#quiz66)
     - quiz 67, 68
     - quiz 69
     - quiz 70
@@ -748,6 +749,266 @@ int main() {
 ```
 
 ## quiz59
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n;
+
+int ch[12];
+
+void func(int level) {
+	if(level > n) {
+		for(int i = 1; i <= n; i++) {
+			if(ch[i]) {
+				cout << i << " ";
+			}
+		}
+		cout << "\n";
+		return;
+	}
+	else {
+		ch[level] = 1;
+		func(level+1);
+		ch[level] = 0;
+		func(level+1);		
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	func(1);
+	
+	return 0;
+}
+```
+
+
+## quiz60
+
+- PASS 1
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val, a, b;
+int arr[12];
+int ch[12];
+bool isSame;
+
+void dfs(int level) {
+	if(level > n) {
+		a = b = 0;
+		for(int i = 1; i <=n; i++) {
+			if(ch[i]) a += arr[i];
+			else b += arr[i];
+		}
+		if(a == b) {
+			isSame = true;
+			cout << "YES";6
+			exit(0);
+		}
+		
+		return;
+	}
+	ch[level] = 1;
+	dfs(level+1);
+	ch[level] = 0;
+	dfs(level+1);
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	cin >> n;
+	for(int i = 1; i <= n; i++) {
+		cin >> val;
+		arr[i] = val;
+	}
+	
+	dfs(1);
+	
+	if(isSame) cout << "YES";
+	else cout << "NO";
+	
+	return 0;
+}
+```
+
+- PASS 2 **(cleanCode)**
+>  **부분집합의 합을 두번째 파라미터로 관리**
+
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val, a, b, total;
+int arr[12];
+bool isSame;
+
+void dfs(int level, int sum) {
+	if(sum > (total/2)) return;
+	if(isSame) return; 
+	if(level > n) {
+		if(sum == total - sum) 
+			isSame = true;
+	}
+	else {
+		dfs(level+1, sum+arr[level]);
+		dfs(level+1, sum);
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	
+	
+	cin >> n;
+	for(int i = 1; i <= n; i++) {
+		cin >> val;
+		arr[i] = val;
+		total += val;
+	}
+	
+	dfs(1, 0); // 부분집합의 합을 두번째 파라미터로 관리	 
+	
+	if(isSame) cout << "YES";
+	else cout << "NO";
+	
+	return 0;
+}
+```
+
+## quiz61
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n,m,val,cnt;
+int arr[12];
+int ch[12]; // 1 : (+) , 2 : (-) , 3 : ()
+
+int dfs(int level, int res) {
+	if(level > n) {
+		if(res == m) {
+			cnt++;
+			for(int i = 1; i < n ; i++) {
+				if(ch[i] == 1) 
+					cout << arr[i] << " + ";
+				else if(ch[i] == 3)
+					cout << "-" << arr[i]<< " + ";
+				else continue;
+			}
+			if(ch[n] == 1) cout << arr[n];
+			else if(ch[n] == 3) cout << "-" <<arr[n];
+			
+			cout << " = " << m << "\n";
+		}
+	}
+	else {
+		ch[level] = 1;
+		dfs(level+1, res + arr[level]);
+		ch[level] = 2;
+		dfs(level+1, res);
+		ch[level] = 3;
+		dfs(level+1, res - arr[level]);
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+
+	cin >> n >> m;
+	for(int i = 1; i <= n; i++) {
+		cin >> val;
+		arr[i] = val;
+	}
+	
+	dfs(1,0);
+	cout << cnt;
+	
+	return 0;
+}
+```
+
+## quiz62
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, val;
+int arr[102];
+int tmp[102];
+
+void mergeSort(int lt, int rt) {
+	int mid;
+	int p1, p2, p3;
+	
+	if(lt < rt) {
+		mid = (lt+rt) / 2;
+		mergeSort(lt, mid);
+		mergeSort(mid+1, rt);
+		
+		p1 = lt;
+		p2 = mid+1;
+		p3 = lt;
+		
+		while(p1 <= mid && p2 <=rt) {
+			if(arr[p1] < arr[p2]) tmp[p3++] = arr[p1++];
+			else tmp[p3++] = arr[p2++];
+		}
+		
+		while(p1 <= mid) tmp[p3++] = arr[p1++];
+		while(p2 <= rt) tmp[p3++] = arr[p2++];
+		
+		for(int i = lt ; i <= rt; i++) 
+			arr[i] = tmp[i];	
+	}	
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	cin >> n;
+	for(int i = 1; i <= n; i++) {
+		cin >> val;
+		arr[i] = val;
+	}
+	
+	mergeSort(1, n);
+	for(int i = 1; i <= n; i++) {
+		cout << arr[i] <<" ";
+	}
+	
+	return 0;
+}
+```
+
+## quiz64
+
+```c++
+
+```
+
+
+## quiz66
 
 ```c++
 
