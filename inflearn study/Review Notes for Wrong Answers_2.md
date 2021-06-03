@@ -23,8 +23,8 @@
     - [quiz 60](#quiz60) : void dfs(int level, int sum) - 부분집합의 합을 함수파라미터로 관리
     - [quiz 61](#quiz61) : 문제에서 발전 - 특정수를 만드는 요소들을 출력할 것<!--예를들어 6+8-2=12 인 경우, -2 0 6 8 이렇게 출력할 것 -->
     - [quiz 62](#quiz62) : 병합정렬 Point **1. 후위순회방식 2. tmp 배열 & point 변수(p1,p2,p3)**
-    - [quiz 64](#quiz64)
-	- [quiz 66](#quiz66)
+    - [quiz 64](#quiz64) : 인접행렬
+	- [quiz 66](#quiz66) : vector 인접리스트
     - quiz 67, 68
     - quiz 69
     - quiz 70
@@ -1003,13 +1003,175 @@ int main() {
 
 ## quiz64
 
-```c++
+- 인접행렬 _myCode
 
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, a, b, cnt; 
+int ch[22];
+int arr[22][22];
+
+void dfs(int level) {
+	for(int i = 1; i <= n; i++) {
+		if(arr[level][i] == 1 && i == n) {
+			cnt++;
+		}
+		if(arr[level][i] && ch[i] == 0) {
+			ch[i] = 1;
+			dfs(i);
+			ch[i] = 0;
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n >> m;
+	
+	for(int i = 1; i <= m ; i++) {
+		cin >> a >> b;
+		arr[a][b] = 1;
+	}
+	ch[1] = 1;
+	dfs(1);	
+	cout << cnt;
+	
+	return 0;
+}
 ```
 
+- **cleanCode**
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, a, b, cnt; 
+int ch[22];
+int arr[22][22];
+
+void dfs(int level) {
+	if(level == n) cnt++;
+	for(int i = 1; i <= n; i++) {
+		if(arr[level][i] && ch[i] == 0) {
+			ch[i] = 1;
+			dfs(i);
+			ch[i] = 0; // 여기서 check를 풀어주는 이유 : 경로의 가짓수가 여러 경우의 수가 나올 수 있으므로 다른 경우의 수를 위해서..
+			// 즉 예를들어 level 5를 방문하고 해당 경우의수를 찾아주고 ch[5] = 0으로 다시 초기화해줘야함. 다른 경우의 수에서 ch배열을 체크하고 새로운 경로를 탐색해야하니까.
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n >> m;
+	
+	for(int i = 1; i <= m ; i++) {
+		cin >> a >> b;
+		arr[a][b] = 1;
+	}
+	ch[1] = 1;
+	dfs(1);	
+	cout << cnt;
+	
+	return 0;
+}
+```
 
 ## quiz66
 
-```c++
+- 인접리스트
 
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, a, b, cnt; 
+int ch[22];
+vector<int> v[22];
+
+void dfs(int level) {
+	for(int i = 0; i < v[level].size(); i++) {
+		int x = v[level][i];
+		if(x == n) {
+			cnt++;
+		}
+		if(ch[x] == 0) {
+			ch[x] = 1;
+			dfs(x);
+			ch[x] = 0;
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n >> m;
+	
+	for(int i = 1; i <= m ; i++) {
+		cin >> a >> b;
+		v[a].push_back(b);
+	}
+	
+	ch[1] = 1;
+	dfs(1);
+
+	cout << cnt;
+	
+	return 0;
+}
 ```
+
+- **cleanCode**
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, a, b, cnt; 
+int ch[22];
+vector<int> v[22];
+
+void dfs(int level) {
+	if(level == n) {
+		cnt++;
+		return;	
+	}	
+	for(int i = 0; i < v[level].size(); i++) {
+		int x = v[level][i];
+		if(ch[x] == 0) {
+			ch[x] = 1;
+			dfs(x);
+			ch[x] = 0;
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	cin >> n >> m;
+	
+	for(int i = 1; i <= m ; i++) {
+		cin >> a >> b;
+		v[a].push_back(b);
+	}
+	
+	ch[1] = 1;
+	dfs(1);
+
+	cout << cnt;
+	
+	return 0;
+}
+```
+
