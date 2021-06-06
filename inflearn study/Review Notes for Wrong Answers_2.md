@@ -1055,7 +1055,10 @@ int ch[22];
 int arr[22][22];
 
 void dfs(int level) {
-	if(level == n) cnt++;
+	if(level == n) {
+		cnt++;
+		return; // 재귀 함수에서 탈출조건 코딩해주기
+	}
 	for(int i = 1; i <= n; i++) {
 		if(arr[level][i] && ch[i] == 0) {
 			ch[i] = 1;
