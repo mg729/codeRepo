@@ -25,10 +25,10 @@
     - [quiz 62](#quiz62) : 병합정렬 Point **1. 후위순회방식 2. tmp 배열 & point 변수(p1,p2,p3)**
     - [quiz 64](#quiz64) : 인접행렬
 	- [quiz 66](#quiz66) : vector 인접리스트
-    - quiz 67, 68
-    - quiz 69
-    - quiz 70
-    - quiz 71
+    - [quiz 67_68](#quiz67_68)
+    - [quiz 69](#quiz69)
+    - [quiz 70](#quiz70)
+    - [quiz 71](#quiz71)
     - quiz 72
     - quiz 74
     - quiz 75
@@ -1177,4 +1177,122 @@ int main() {
 	return 0;
 }
 ```
+
+## quiz67_68
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, a, b, val;
+int minVal = 2147000000; 
+int ch[22];
+vector<pair<int,int> > v[22];
+
+void dfs(int level, int sum) {
+	if(level >= n) {
+		if(sum < minVal) minVal = sum;
+		return;
+	}
+	for(int i = 0; i < v[level].size(); i++) {
+		int idx = v[level][i].first;
+		if(ch[idx] == 0) {
+			ch[idx] = 1;
+			dfs(idx, sum + v[level][i].second);
+			ch[idx] = 0;
+		}
+	}
+}
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+//	freopen("input.txt", "rt", stdin);
+	cin >> n >> m;
+	
+	// 1번에서 N번으로 가는 최소비용 출력 
+	for(int i = 0 ; i < m; i++) {
+		cin >> a >> b >> val;
+		v[a].push_back({b, val});		
+	}
+	
+	ch[1] = 1;
+	dfs(1, 0);
+	cout << minVal;
+	
+	return 0;
+}
+```
+
+- first, second 변수 선언하는 법
+
+```c++
+#define X first
+#define Y second
+```
+
+## quiz69
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int a, b;
+queue<int> q;
+int ch[8];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	ch[1] = 1;
+	q.push(1);
+	for(int i = 0; i < 6; i++) {
+		cin >> a >> b;
+		if(ch[b] == 0){
+			ch[b] = 1;
+			q.push(b);
+		}
+	}
+	
+	while(!q.empty()) {
+		cout << q.front() << " ";
+		q.pop();		
+	}
+	return 0;
+}
+```
+
+- **cleanCode**
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n1, n2; // node 1, node 2
+queue<int> q;
+vector<int> v[10];
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	freopen("input.txt", "rt", stdin);
+	for(int i = 0; i < 6; i++) {
+		cin >> n1 >> n2;
+		v[n1].push_back(n2);
+	}
+	
+	q.push(1);
+	while(!q.empty()) {
+		int x = q.front();
+		for(int i = 0; i < v[x].size(); i++) {
+			q.push(v[x][i]);
+		}
+		cout << q.front() << " ";
+		q.pop();		
+	}
+	return 0;
+}
+```
+
 
