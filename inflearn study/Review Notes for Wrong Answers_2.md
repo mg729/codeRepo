@@ -1296,3 +1296,54 @@ int main() {
 ```
 
 
+## quiz70
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, node1, node2, cnt;
+vector<int> v[22];
+int arr[22];
+int ch[22];
+queue <int> q;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> m;
+	for(int i = 0; i < m; i++) {
+		cin >> node1 >> node2;
+		v[node1].push_back(node2);
+	}
+	
+	q.push(1);
+	ch[1] = 1;
+	arr[1] = 0;
+	int cnt = 1;
+	while(!q.empty()) {
+		int fr = q.front();
+		for(int i = 0; i < v[fr].size(); i++) {
+			if(ch[v[fr][i]] == 0) {
+				q.push(v[fr][i]);
+				arr[v[fr][i]] = arr[fr] + 1; // queue front 데이터를 인덱스로 활용하여 이전 arr값을 활용
+				ch[v[fr][i]] = 1;
+			}
+		}
+		q.pop();
+	}
+	
+	for(int i = 2; i <= n; i++) cout << i << " : " << arr[i] << endl;
+		
+	return 0;
+}
+```
+
+## quiz71
+
+```c++
+
+```
