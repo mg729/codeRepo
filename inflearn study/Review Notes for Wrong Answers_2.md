@@ -29,9 +29,9 @@
     - [quiz 69](#quiz69)
     - [quiz 70](#quiz70)
     - [quiz 71](#quiz71)
-    - quiz 72
-    - quiz 74
-    - quiz 75
+    - [quiz 72](#quiz72)
+    - [quiz 74](#quiz74)
+    - [quiz 75](#quiz75)
 
 
 ### quiz26
@@ -1343,6 +1343,166 @@ int main() {
 ```
 
 ## quiz71
+
+- Code
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int s, e, a, b, c, cnt;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+//	freopen("input.txt", "rt", stdin);
+	cin >> s >> e;
+	int tmp = s;
+	while(1) {
+		int cur = tmp;
+		if(cur == e) break;
+		
+		a = cur + 1;
+		b = cur - 1;
+		c = cur + 5;
+		int minDiff = 2147000000;
+		
+		if(abs(a-e) < abs(b-e)) minDiff = abs(a-e);
+		else minDiff = abs(b - e);
+		if(abs(c-e) < minDiff) minDiff = abs(c-e);
+		
+		if(abs(a-e) == minDiff) tmp = a;
+		if(abs(b-e) == minDiff) tmp = b;
+		if(abs(c-e) == minDiff) tmp = c;
+		cnt++;
+	}
+	cout << cnt;
+
+	return 0;
+}
+```
+
+- **cleanCode**
+
+> **어떤 출발 점에서 도착 점을 향해서 갈 때 최소 횟수로 가는 횟수/최단 거리 구하라 --> BFS 넓이우선 탐색 문제 : 큐!자료구조 활용해야합니다.**
+
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int s, e, qF, pos, cnt;
+int ch[10002];
+int dir[3] = {1, -1, 5};
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+	freopen("input.txt", "rt", stdin);
+	cin >> s >> e;
+	
+	queue <int> q;
+	ch[s] = 1;
+	q.push(s);
+	while(1) {
+		qF = q.front();
+		
+		for(int i = 0; i < 3; i++) {
+			pos = qF + dir[i];
+
+			if(pos <= 0 || pos> 10000) continue;
+			
+			if(pos == e) {
+				cout << ch[qF]; // 출발지점을 1부터했으니까 도착지점보다 앞지점인 qF 값의 거리
+				exit(0);
+			}
+			
+			if(ch[pos] == 0) {
+				q.push(pos);
+				ch[pos] = ch[qF] + 1;
+			}
+		}
+		
+		cnt++;
+		q.pop();
+	}
+
+	
+	return 0;
+}
+```
+
+
+## quiz72
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, k;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+//	freopen("input.txt", "rt", stdin);
+	
+	cin >> n >> k;
+	
+	queue<int> q;
+	for(int i = 1; i <= n; i++) {
+		q.push(i);
+	}
+	int cnt = 1;
+	while(!q.empty()) {
+		if(cnt == k) cnt = 1;
+		else {
+			if(q.size() == 1) cout << q.front();
+			else q.push(q.front());
+			cnt++;
+		}
+		q.pop();	
+	}
+	
+	return 0;
+}
+```
+
+## quiz74
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int val;
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+	freopen("input.txt", "rt", stdin);
+	
+	priority_queue <int> q;
+	
+	while(1) {
+		cin >> val;
+		if(val == -1) break;
+		else if(val == 0) {
+			if(!q.empty()){
+				cout << -q.top() << "\n";
+				q.pop();
+			}
+			else cout << "-1" << "\n";
+		}
+		else q.push(-val);		
+	}
+	return 0;
+}
+```
+
+## quiz75
 
 ```c++
 
