@@ -1504,6 +1504,124 @@ int main() {
 
 ## quiz75
 
-```c++
+- wrongCode
 
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, d, sum;
+
+struct income {
+	int money, day;
+	income(int a, int b) {
+		money = a;
+		day = b;
+	}
+	bool operator < (const income& cmpIncome) const {
+		if(day != cmpIncome.day) return day < cmpIncome.day;
+	}
+};
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+//	freopen("input.txt", "rt", stdin);
+	cin >> n;
+	
+	vector<income> v;
+	int maxDay = 0;
+	for(int i = 0; i < n; i++) {
+		cin >> m >> d;
+		if(d > maxDay) maxDay = d;
+		v.push_back({m, d});
+	}
+	
+	sort(v.begin(), v.end());	
+//	for(auto x : v) {
+//		cout << x.money << " " << x. day << "\n";
+//	}
+	
+	priority_queue <int> pq;
+	int j = 0;
+	for(int i = 1; i <= maxDay; i++) {
+		while(1) {
+			if(v[j].day == i) {
+				pq.push(-v[j].money);
+			}
+			else break;
+			j++;
+		}
+		
+		while(pq.size() > i) {
+			pq.pop();
+		}
+	}
+	
+	while(!pq.empty()) {
+		sum += -(pq.top());
+		pq.pop();
+	}
+	
+	cout << sum;
+ 	return 0;
+}
+```
+
+- **CLEAN CODE**
+
+```c++
+#include<bits/stdc++.h>
+using namespace std;
+
+int n, m, d, sum;
+
+struct income {
+	int money, day;
+	income(int a, int b) {
+		money = a;
+		day = b;
+	}
+	bool operator < (const income& cmpIncome) const {
+		return day > cmpIncome.day;
+	}
+};
+
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+//	freopen("input.txt", "rt", stdin);
+	cin >> n;
+	
+	vector<income> v;
+	int maxDay = -1;
+	for(int i = 0; i < n; i++) {
+		cin >> m >> d;
+		if(d > maxDay) maxDay = d;
+		v.push_back({m, d});
+	}
+	
+	sort(v.begin(), v.end());	
+//	for(auto x : v) {
+//		cout << x.money << " " << x. day << "\n";
+//	}
+
+	int j = 0;
+	priority_queue <int> pq;
+	for(int i = maxDay; i >= 1; i--) {
+		for(; j < n; j++) {
+			if(v[j].day < i) break;
+			pq.push(v[j].money);
+		}
+		if(!pq.empty()) {
+			sum += pq.top();
+			pq.pop();
+		}
+	}
+
+	cout << sum;
+ 	return 0;
+}
 ```
