@@ -19,6 +19,7 @@
     - quiz 75<br>    <!--구조체를 이용한 STL vector 정렬 공부 확실히 하기, 강의꼭다시수강할 것-->
     <!--Please memorize above quiz solutions && 다시 풀이하기-->
     <!--76번부터~90번까지 :) -->
+    - quiz 76<br>
 - 면접대비<!--오답정리때 답은 맞추었음, 그래도 문제읽어보고 정답풀이 확인하고 풀이 암기권장및 강의 반복수강--><br>
     - quiz 56 (강의 : *56.재귀함수 분석 보충* - 스택프레임/스택오버플로우 개념)<br>
     - quiz 56, 57 : 나 재귀함수짤 때 탈출조건 1에 집착하는데 x == 0으로도 받아보고 다양하게 생각해보자 : 탈출조건 x==1 아니고 x==0<br>
@@ -55,6 +56,7 @@
 [022 다익스트라](#Dijkstra)  
 [023 dfs,bfs](#DFS_BFS)  
 [024 priority queue](#priority_queue)  
+[025 memoization](#memoization)  
 
 
 ## max,min_Initialization
@@ -404,3 +406,15 @@ template<
 
 priority_queue <int, vector<int>, greater<int>> pq;
 ```
+
+## memoization
+> quiz 76 - 이항계수(메모이제이션 풀이)  
+
+
+- **메모이제이션(memoization)**은 컴퓨터 프로그램이 동일한 계산을 반복해야 할 때, 이전에 계산한 값을 메모리에 저장함으로써 동일한 계산의 중복 수행을 제거하여 프로그램 실행 속도를 빠르게 하는 기술이다.
+
+- 대표 예제 
+    - **이항계수**
+    - **nCr = n-1Cr + n-1Cr-1**
+    - 이미 계산된 조합의 결과는 중복계산하지 않도록 코딩
+
