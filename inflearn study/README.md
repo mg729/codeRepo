@@ -20,6 +20,7 @@
     <!--Please memorize above quiz solutions && 다시 풀이하기-->
     <!--76번부터~90번까지 :) -->
     - quiz 76<br>
+    - quiz 77<br>
 - 면접대비<!--오답정리때 답은 맞추었음, 그래도 문제읽어보고 정답풀이 확인하고 풀이 암기권장및 강의 반복수강--><br>
     - quiz 56 (강의 : *56.재귀함수 분석 보충* - 스택프레임/스택오버플로우 개념)<br>
     - quiz 56, 57 : 나 재귀함수짤 때 탈출조건 1에 집착하는데 x == 0으로도 받아보고 다양하게 생각해보자 : 탈출조건 x==1 아니고 x==0<br>
@@ -57,6 +58,7 @@
 [023 dfs,bfs](#DFS_BFS)  
 [024 priority queue](#priority_queue)  
 [025 memoization](#memoization)  
+[026 UnionFind](#UnionFind)  
 
 
 ## max,min_Initialization
@@ -420,3 +422,11 @@ priority_queue <int, vector<int>, greater<int>> pq;
         - *n개 중 n개 모두를 선택하는 경우의수*와 *n개 중 아무것도 고르지 않는 경우의 수* 모두 1가지씩있으므로 nCn과 nC0은 1의 값을 가짐
     - 이미 계산된 조합의 결과는 중복계산하지 않도록 코딩
 
+## UnionFind  
+> **UnionFind**  : *A disjoint-set* data strsubsetsucture is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) . A union-find algorithm is an algorithm that performs two useful operations on such a data structure
+
+
+- Union Find 알고리즘 : Disjoint Set을 표현할 때 사용하는 알고리즘
+    - Disjoint Set 서로소 집합 
+    - **tree**로 구현합니다.
+    
