@@ -21,6 +21,7 @@
     <!--76번부터~90번까지 :) -->
     - quiz 76<br>
     - quiz 77<br>
+    - quiz 78<br>
 - 면접대비<!--오답정리때 답은 맞추었음, 그래도 문제읽어보고 정답풀이 확인하고 풀이 암기권장및 강의 반복수강--><br>
     - quiz 56 (강의 : *56.재귀함수 분석 보충* - 스택프레임/스택오버플로우 개념)<br>
     - quiz 56, 57 : 나 재귀함수짤 때 탈출조건 1에 집착하는데 x == 0으로도 받아보고 다양하게 생각해보자 : 탈출조건 x==1 아니고 x==0<br>
@@ -59,6 +60,7 @@
 [024 priority queue](#priority_queue)  
 [025 memoization](#memoization)  
 [026 UnionFind](#UnionFind)  
+[027 Kruskal Algorithm](#Kruskal)
 
 
 ## max,min_Initialization
@@ -429,4 +431,13 @@ priority_queue <int, vector<int>, greater<int>> pq;
 - Union Find 알고리즘 : Disjoint Set을 표현할 때 사용하는 알고리즘
     - Disjoint Set 서로소 집합 
     - **tree**로 구현합니다.
+    
+## Kruskal
+
+- **Kruskal's Algorithm 크루스칼 알고리즘** : 최소비용신장트리
+    - **MST** (*Minimun Spanning Tree*)
+    - 그래프에서 최소비용 트리 만드는 것
+    - 크루스칼 알고리즘이란, 그래프 내의 모든 정점들을 가장 적은 비용으로 연결하기 위해 사용, 그래프 내의 모든 정점을 포함하고 사이클이 없는 연결 선을 그렸을 때, 가중치의 합이 최소가 되는 상황을 구하고 싶을 때 크루스칼 알고리즘을 사용
+
+    - SOLUTION : UnionFind (quiz78)
     
