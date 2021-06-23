@@ -12,7 +12,7 @@ struct land {
 		z = val3;
 	}
 	bool operator < (const land& cmpLand) const {
-		return z < cmpLand.z;
+		return z < cmpLand.z; // 작은게 앞으로가는 오름차순  
 	}
 };
 
@@ -45,7 +45,7 @@ int main() {
 	vector<land> v;
 	for(int i = 0 ; i < e ; i++) {
 		cin >> a >> b >> c;
-		v.push_back({a, b, c});
+		v.push_back({a, b, c}); //v.push_back(land(a, b, c));
 	}
 	
 	sort(v.begin(), v.end());
