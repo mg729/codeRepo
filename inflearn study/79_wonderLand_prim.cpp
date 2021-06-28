@@ -15,7 +15,7 @@ int main() {
 	for(int i = 1; i <= e; i++) {
 		cin >> node1 >> node2 >> cost;
 		vertex[node1].push_back({cost, node2});
-		vertex[node2].push_back({cost, node1});
+		vertex[node2].push_back({cost, node1}); // 무방향 그래프 
 	}
 	
 	priority_queue<pair<int, int> > pq;
