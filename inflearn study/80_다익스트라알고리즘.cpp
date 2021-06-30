@@ -7,7 +7,6 @@ vector<pair<int, int> > v[22];
 int cost[22];
 int ch[22];
 
-
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
@@ -39,8 +38,6 @@ int main() {
 		}
 		if(isChecked){
 			ch[node] = 1;
-		}
-		if(isChecked) {
 			for(int i = 0; i < v[node].size(); i++) {
 				int connectedNode = v[node][i].first; // node
 				if(ch[connectedNode] == 0) {
