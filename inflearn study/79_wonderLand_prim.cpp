@@ -24,7 +24,6 @@ int main() {
 		int x = pq.top().second;
 		cost = -pq.top().first;
 		pq.pop();
-//		cout << __LINE__ <<"***** "<<x << " : " << cost << endl;
 		if(ch[x] == 0) {
 			ch[x] = 1;
 			sum += cost;
@@ -32,7 +31,6 @@ int main() {
 				int a = -vertex[x][j].first;
 				int b = vertex[x][j].second;
 				pq.push({a,b});
-//				cout << __LINE__ <<" "<<a << " : " << b << endl;
 			}
 		}
 	}
