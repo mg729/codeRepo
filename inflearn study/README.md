@@ -64,7 +64,8 @@
 [025 memoization](#memoization)  
 [026 UnionFind](#UnionFind)  
 [027 Kruskal Algorithm](#Kruskal)  
-[027 Prim MST](#Prim)  
+[028 Prim MST](#Prim)  
+[029 벨만-포드 알고리즘](#bellman_ford)
 
 
 ## max,min_Initialization
@@ -429,6 +430,9 @@ priority_queue <int, vector<int>, greater<int>> pq;
     - **nCr = n-1Cr + n-1Cr-1**
     - **nCn == nC0** : **1**
         - *n개 중 n개 모두를 선택하는 경우의수*와 *n개 중 아무것도 고르지 않는 경우의 수* 모두 1가지씩있으므로 nCn과 nC0은 1의 값을 가짐
+        - 예) 1 2 3 4 5 이렇게 있을 때 5C3 = 4C2 + 4C3 임
+            - 5를 제외한 나머지 1 2 3 4 중에서 2명만 뽑는 경우의수 (5가 부분집합에 포함)
+            - 5를 제외한 나머지 1 2 3 4 중에서 3명을 뽑는 경우의 수 (5가 부분집합에 포함되지 않는 경우의 수)
     - 이미 계산된 조합의 결과는 중복계산하지 않도록 코딩
 
 ## UnionFind  
@@ -462,3 +466,16 @@ priority_queue <int, vector<int>, greater<int>> pq;
 - **prim & kruskal 차이**
     - 프림 알고리즘은 꼭지점(정점)을 선택하고 그것과 연결된 가장 적은 비용의 **정점을 선택**
     - 크루스칼 알고리즘은 모든 비용을 순차적으로 나열하여 가장 적은 비용이 드는 **간선(신장)들을 선택**
+
+## bellman_ford
+> quiz 81
+
+
+- **Bellman-Ford algorithm**
+    - 벨먼-포드 알고리즘은 가중 유향 그래프에서 최단 경로 문제를 푸는 알고리즘
+    - 이때 **변의 가중치는 음수일 수도 있음** 
+    - Dijkstra 알고리즘은 벨먼-포드 알고리즘과 동일한 작업을 수행하고 실행속도도 더 빠름
+    - 하지만 Dijkstra 알고리즘은 가중치가 음수인 경우는 처리할 수 없으므로, 이런 경우에는 벨먼-포드 알고리즘을 사용
+    - *negative cycle* 음수 사이클이 있는 경우는 무한히 사이클을 루프할 수 있다는 점에서 최단경로를 구할 수 없다.
+- Dijkstra : edge의 비용이 양의 값
+- Bellman-Ford : edge의 비용이 음수일 수 도있음
