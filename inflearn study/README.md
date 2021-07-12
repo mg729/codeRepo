@@ -27,7 +27,8 @@
     - quiz 79<br>
     - quiz 80<br>                  <!-- 이 문제를 풀이할 때 반드시  vector를 초기화할때 2147000000으로 선언 및 초기화 하고 우선순위 큐..쓸 것-->
     - quiz 81<br> 
-    - quiz 82<br>                  <!-- 순열 구하기 && 강의 체크하고 스택프레임 호출관계체크 --> 
+    - quiz 82<br>                  <!-- 순열 구하기 && 강의 체크하고 스택프레임 호출관계체크 -->
+    - quiz 83<br> 
 - 면접대비<!--오답정리때 답은 맞추었음, 그래도 문제읽어보고 정답풀이 확인하고 풀이 암기권장및 강의 반복수강--><br>
     - quiz 56 (강의 : *56.재귀함수 분석 보충* - 스택프레임/스택오버플로우 개념)<br>
     - quiz 56, 57 : 나 재귀함수짤 때 탈출조건 1에 집착하는데 x == 0으로도 받아보고 다양하게 생각해보자 : 탈출조건 x==1 아니고 x==0<br>
@@ -68,7 +69,8 @@
 [026 UnionFind](#UnionFind)  
 [027 Kruskal Algorithm](#Kruskal)  
 [028 Prim MST](#Prim)  
-[029 벨만-포드 알고리즘](#bellman_ford)
+[029 벨만-포드 알고리즘](#bellman_ford)  
+[030 복면산](#Cryptarithms)  
 
 
 ## max,min_Initialization
@@ -482,3 +484,12 @@ priority_queue <int, vector<int>, greater<int>> pq;
     - *negative cycle* 음수 사이클이 있는 경우는 무한히 사이클을 루프할 수 있다는 점에서 최단경로를 구할 수 없다.
 - Dijkstra : edge의 비용이 양의 값
 - Bellman-Ford : edge의 비용이 음수일 수 도있음
+
+
+## Cryptarithms
+> quiz 83
+
+
+- 복면산
+    - **복면산(Verbal arithmetic 또는 Cryptarithms)**이란, 숫자를 문자로 치환하여 나타낸 수식으로부터 각 문자가 나타내는 원래의 숫자를 알아내어 전체식을 완성하는 문제이다. 숫자 대부분이 문자로 숨겨서 나타내므로 숫자가 “복면”을 쓰고 있는 연산이라는 뜻에서 복면산이라 이름 지어졌다.
+    
